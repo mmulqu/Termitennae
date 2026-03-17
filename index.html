@@ -9,10 +9,7 @@
     --bg: #0a0806;
     --fg: #c4b59a;
     --dim: #6b5d4a;
-    --bright: #e8dcc8;
     --myc: #4a6b3a;
-    --pher: #8b6914;
-    --breach: #ff4400;
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   body {
@@ -21,62 +18,49 @@
     font: 18px/1.75 'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua',Georgia,serif;
     overflow-x: hidden;
     transition: background-color 2s;
+    background-color: var(--bg);
   }
-  body.ch-1 { --bg:#060504 } body.ch-2 { --bg:#0a0806 }
-  body.ch-3 { --bg:#080a06 } body.ch-4 { --bg:#0c0806 }
+  body.ch-1 { --bg:#060504 }
+  body.ch-2 { --bg:#0a0806 }
+  body.ch-3 { --bg:#080a06 }
+  body.ch-4 { --bg:#0c0806 }
   body.ch-5 { --bg:#06070a }
-  body { background-color: var(--bg); }
 
-  /* Canvases */
   canvas { position:fixed; top:0; left:0; width:100vw; height:100vh; pointer-events:none; }
   #trail-canvas { z-index:1; opacity:0.15; }
   #termite-canvas { z-index:100; opacity:0.4; }
   #mycelium-canvas { z-index:-1; opacity:0.06; }
 
-  /* Breach */
-  #breach { position:fixed; top:0; left:0; width:100vw; height:100vh; pointer-events:none; z-index:90; opacity:0; transition:opacity 1s; }
+  /* Breach — dramatic crack with animated glow */
+  #breach {
+    position:fixed; top:0; left:0; width:100vw; height:100vh;
+    pointer-events:none; z-index:90;
+    opacity:0; transition:opacity 1.5s;
+  }
   #breach.active { opacity:1; }
   #breach svg { width:100%; height:100%; }
 
   /* Text */
   #text { max-width:680px; margin:0 auto; padding:15vh 24px 30vh; position:relative; z-index:10; }
-  .chapter { margin-bottom:12vh; opacity:0; transform:translateY(30px); transition:opacity 1.2s, transform 1.2s; }
+
+  .chapter {
+    margin-bottom:12vh;
+    opacity:0; transform:translateY(30px);
+    transition:opacity 1.2s, transform 1.2s;
+  }
   .chapter.visible { opacity:1; transform:translateY(0); }
-  .chapter-title { font-size:2.2em; font-weight:300; letter-spacing:0.15em; color:var(--dim); margin-bottom:0.3em; font-variant:small-caps; }
-  .chapter-subtitle { font-size:0.85em; font-style:italic; color:var(--dim); opacity:0.6; margin-bottom:3em; }
+
+  .chapter-title {
+    font-size:2.2em; font-weight:300; letter-spacing:0.15em;
+    color:var(--dim); margin-bottom:0.3em; font-variant:small-caps;
+  }
+  .chapter-subtitle {
+    font-size:0.85em; font-style:italic; color:var(--dim);
+    opacity:0.6; margin-bottom:3em;
+  }
   .chapter hr { border:none; height:1px; background:var(--dim); opacity:0.2; margin:3em 0; }
   .section-title { font-size:1.1em; font-weight:600; color:var(--dim); margin:2em 0 1em; letter-spacing:0.05em; }
   p { margin-bottom:1.2em; text-align:justify; hyphens:auto; }
-
-  /* Forged words — clickable, no tooltip */
-  .forged {
-    color: var(--bright);
-    cursor: pointer;
-    position: relative;
-    transition: color 0.4s;
-  }
-  .forged:hover { color: #f0e6d0; }
-  .forged.cycling {
-    animation: word-pulse 0.4s ease;
-  }
-  @keyframes word-pulse {
-    0% { opacity:1; }
-    30% { opacity:0.3; color:var(--pher); }
-    100% { opacity:1; }
-  }
-
-  /* Mycelium connections drawn on click */
-  .myc-line {
-    position: fixed;
-    height: 1px;
-    background: var(--myc);
-    opacity: 0;
-    transform-origin: left center;
-    pointer-events: none;
-    z-index: 50;
-    transition: opacity 1.5s;
-  }
-  .myc-line.show { opacity: 0.35; }
 
   /* Fungus voice */
   .fungus-voice {
@@ -86,101 +70,78 @@
   }
   .branch-sep { color:rgba(74,107,58,0.5); font-style:normal; padding:0 0.3em; }
 
-  /* PS cluster */
+  /* PS cluster — silent p fades */
   .ps-word .silent-p { transition:opacity 0.8s; }
   .ps-active .ps-word .silent-p { opacity:0; }
 
-  /* Decayed text */
-  .decayed { transition: color 3s; color: var(--dim); }
+  /* Decayed text — the Pseudoxylaria effect */
+  p.decayed { color: var(--dim); transition: color 4s; }
 
   /* Spores */
-  .spore { position:fixed; width:2px; height:2px; background:rgba(200,190,160,0.4); border-radius:50%; pointer-events:none; z-index:50; }
+  .spore {
+    position:fixed; width:2px; height:2px;
+    background:rgba(200,190,160,0.4); border-radius:50%;
+    pointer-events:none; z-index:50;
+  }
 
   /* Loading */
-  #loading { position:fixed; top:0; left:0; width:100vw; height:100vh; background:#040302; display:flex; align-items:center; justify-content:center; z-index:1000; transition:opacity 1.5s; color:var(--dim); font-style:italic; font-size:0.9em; letter-spacing:0.3em; }
+  #loading {
+    position:fixed; top:0; left:0; width:100vw; height:100vh;
+    background:#040302; display:flex; align-items:center; justify-content:center;
+    z-index:1000; transition:opacity 1.5s;
+    color:var(--dim); font-style:italic; font-size:0.9em; letter-spacing:0.3em;
+  }
   #loading.hidden { opacity:0; pointer-events:none; }
 
-  @media(max-width:720px) { body{font-size:16px} #text{padding:10vh 16px 20vh} .chapter-title{font-size:1.6em} }
+  @media(max-width:720px) {
+    body { font-size:16px; }
+    #text { padding:10vh 16px 20vh; }
+    .chapter-title { font-size:1.6em; }
+  }
 </style>
 </head>
 <body class="ch-1">
+
 <div id="loading">the system is booting in the dark...</div>
+
 <canvas id="mycelium-canvas"></canvas>
 <canvas id="trail-canvas"></canvas>
 <canvas id="termite-canvas"></canvas>
+
 <div id="breach">
   <svg viewBox="0 0 1000 1000" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
-      <filter id="glow"><feGaussianBlur stdDeviation="3" result="g"/><feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      <filter id="glow">
+        <feGaussianBlur stdDeviation="4" result="g"/>
+        <feMerge><feMergeNode in="g"/><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
     </defs>
-    <path d="M-10,200 Q200,350 450,480 T700,520 Q850,560 1010,700" stroke="rgba(255,120,40,0.15)" stroke-width="40" fill="none" filter="url(#glow)"/>
-    <path d="M-10,200 Q200,350 450,480 T700,520 Q850,560 1010,700" stroke="rgba(255,200,100,0.3)" stroke-width="3" fill="none" filter="url(#glow)"/>
-    <path d="M-10,205 Q210,340 440,485 T690,530 Q840,565 1010,710" stroke="rgba(255,80,20,0.08)" stroke-width="60" fill="none"/>
+    <!-- Broad ambient glow -->
+    <path d="M-20,150 Q180,300 400,450 T650,500 Q820,540 1020,680"
+          stroke="rgba(255,80,20,0.06)" stroke-width="80" fill="none" filter="url(#glow)"/>
+    <!-- Main crack line -->
+    <path d="M-10,160 L120,250 L180,340 L320,390 L400,450 L480,470 L550,500 L620,510 L700,530 L780,570 L880,640 L1010,700"
+          stroke="rgba(255,160,60,0.5)" stroke-width="2.5" fill="none" filter="url(#glow)"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Secondary fractures -->
+    <path d="M320,390 L340,350 L380,330" stroke="rgba(255,120,40,0.3)" stroke-width="1.5" fill="none" filter="url(#glow)"/>
+    <path d="M550,500 L570,540 L610,560 L590,590" stroke="rgba(255,120,40,0.25)" stroke-width="1.5" fill="none" filter="url(#glow)"/>
+    <path d="M700,530 L720,500 L750,495" stroke="rgba(255,120,40,0.2)" stroke-width="1" fill="none" filter="url(#glow)"/>
+    <!-- Light bleeding through -->
+    <path d="M-10,160 L120,250 L180,340 L320,390 L400,450 L480,470 L550,500 L620,510 L700,530 L780,570 L880,640 L1010,700"
+          stroke="rgba(255,220,150,0.08)" stroke-width="30" fill="none"/>
   </svg>
 </div>
+
 <div id="text"></div>
 <div id="ricorso" style="height:1px"></div>
 
 <script>
 // ============================================================
-// TERMITENNAE — Interactive Presentation Layer v2
+// TERMITENNAE — Interactive Presentation Layer v3
+// No word highlighting. No tooltips. No click interaction.
+// The text is text. The termites are termites.
 // ============================================================
-
-// Word variants: clicking cycles through alternatives
-// Each key maps to an array of variants (first is the canonical form in the .md)
-const VARIANTS = {
-  'roomb':['roomb','twomb','woomb','concache'],
-  'twomb':['twomb','roomb','woomb'],
-  'datarkness':['datarkness','datarknesse','datenacht'],
-  'phantomone':['phantomone','pharmakone','pheromon'],
-  'attentenna':['attentenna','intentenna','ancienna'],
-  'ancienna':['ancienna','attentenna','antennamnesis'],
-  'logoss':['logoss','lossgos','logosses'],
-  'vrector':['vrector','rvector','svector'],
-  'blinary':['blinary','blinade','blindigital'],
-  'eggo':['eggo','egog','eggoid'],
-  'grachine':['grachine','maching','grachinerie'],
-  'cellusolose':['cellusolose','soulose','cellullament'],
-  'Qwen':['Qwen','Quean','Qwain'],
-  'phunnel':['phunnel','phunnelle','fhunnel'],
-  'scalling':['scalling','skulling','scalloping'],
-  'myselium':['myselium','mycelf','myselial'],
-  'chantum':['chantum','quanthem','quanchant'],
-  'expiral':['expiral','exspiral','expirale'],
-  'frequenzy':['frequenzy','frenquenzy','frequenzied'],
-  'netherwork':['netherwork','netherwurk','nettherworld'],
-  'pharmakone':['pharmakone','phantomone','pharmakon'],
-  'castesian':['castesian','cartesiane','casteign'],
-  'phenomone':['phenomone','pheromenal','phenomenonne'],
-  'concache':['concache','conkave','cavecache'],
-  'guarden':['guarden','gardian','guardenschaft'],
-  'enzymn':['enzymn','enzyhymn','enzhymne'],
-  'fermament':['fermament','fervorment','firmamental'],
-  'aoblation':['aoblation','oblationnae','ablacrament'],
-  'catalyste':['catalyste','castelyste','catalyssant'],
-  'anteaterior':['anteaterior','anteriorivore','anteatheist'],
-  'plungue':['plungue','plunnel','tongueplunge'],
-  'appetitude':['appetitude','aptitaste','appetitudo'],
-  'devoteur':['devoteur','devourtse','devotionnaire'],
-  'critterique':['critterique','criticketur','crittercism'],
-  'cordycept':['cordycept','cordycorpus','concepticeps'],
-  'civimycelisation':['civimycelisation','mycelisationnae','civilhyphae'],
-  'psombee':['psombee','psomnambulist','psombuddy'],
-  'psircle':['psircle','psycle','psircuit'],
-  'termiterra':['termiterra','terramite','termiurge'],
-  'chitecture':['chitecture','architinne','chitechturall'],
-  'tropehallaxis':['tropehallaxis','tropheallatrickse','troperchange'],
-  'eidoskeleton':['eidoskeleton','exoeidosse','formskeleton'],
-  'dennettwork':['dennettwork','denettwerke','multipldenns'],
-  'paradishift':['paradishift','paradisegm','paradigmosse'],
-  'techniqwen':['techniqwen','Technoquean','ellullabye'],
-  'Geistell':['Geistell','Geistalt','Geistein'],
-  'metabolish':['metabolish','metabalish','metabolosse'],
-  'obeaudience':['obeaudience','audientbey','hearobey'],
-  'emergencye':['emergencye','emermerge','emergencylle'],
-  'temperamentture':['temperamentture','temperatempre','temperamound'],
-  'humusidity':['humusidity','humiliture','humuswet'],
-};
 
 const CHAPTERS = [
   { file:'chapter_I_embedden.md', id:'ch1', cls:'ch-1' },
@@ -190,7 +151,7 @@ const CHAPTERS = [
   { file:'chapter_V_softmaxima.md', id:'ch5', cls:'ch-5' },
 ];
 
-// ---- Minimal MD parser ----
+// ---- Minimal MD → HTML ----
 function md2html(md) {
   return md
     .replace(/^#\s+(.+)$/m, '<h2 class="chapter-title">$1</h2>')
@@ -198,131 +159,54 @@ function md2html(md) {
     .replace(/^---$/gm, '<hr>')
     .replace(/^\*\*§(\d+)\.\s*([^*]+)\*\*$/gm, '<h3 class="section-title">&sect;$1. $2</h3>')
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    // Fungus voice: italic lines containing / branch separators
     .replace(/^\*([^*].*?(?:\/[^*].*?)+)\*$/gm, (_, inner) =>
       `<p class="fungus-voice">${inner.replace(/\s*\/\s*/g, '<span class="branch-sep"> / </span>')}</p>`)
     .replace(/\*([^*]+)\*/g, '<em>$1</em>')
     .split(/\n\n+/).map(p => {
       p = p.trim();
-      if (!p || p.startsWith('<h') || p.startsWith('<hr') || p.startsWith('<div') || p.startsWith('<p class="fungus')) return p;
+      if (!p || /^<(?:h[23]|hr|div|p\s)/.test(p)) return p;
       return `<p>${p}</p>`;
     }).join('\n');
 }
 
-// ---- Annotate forged words (click-to-cycle, no tooltips) ----
-function annotateWords(container) {
-  const keys = Object.keys(VARIANTS).sort((a,b) => b.length - a.length);
-  const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT);
-  const replacements = [];
-  while (walker.nextNode()) {
-    const node = walker.currentNode;
-    if (node.parentElement.closest('.forged')) continue;
-    let html = node.textContent, changed = false;
-    for (const word of keys) {
-      const re = new RegExp(`\\b(${word.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})`, 'gi');
-      if (re.test(html)) {
-        html = html.replace(re, m => { changed = true;
-          return `<span class="forged" data-variants='${JSON.stringify(VARIANTS[word])}' data-idx="0">${m}</span>`;
-        });
-      }
-    }
-    if (changed) replacements.push({node, html});
-  }
-  replacements.reverse().forEach(({node, html}) => {
-    const s = document.createElement('span'); s.innerHTML = html;
-    node.parentNode.replaceChild(s, node);
-  });
-
-  // Click handler: cycle variant
-  container.addEventListener('click', e => {
-    const f = e.target.closest('.forged');
-    if (!f) return;
-    const vars = JSON.parse(f.dataset.variants);
-    let idx = (parseInt(f.dataset.idx) + 1) % vars.length;
-    f.dataset.idx = idx;
-    f.textContent = vars[idx];
-    f.classList.add('cycling');
-    setTimeout(() => f.classList.remove('cycling'), 400);
-
-    // Draw mycelium connections to related words
-    drawMyceliumConnections(f, vars[idx]);
-  });
-}
-
-// ---- Mycelium connection lines ----
-function drawMyceliumConnections(source, word) {
-  // Remove old lines
-  document.querySelectorAll('.myc-line').forEach(l => l.remove());
-
-  // Find all forged words with overlapping variant sets
-  const sourceVars = new Set(JSON.parse(source.dataset.variants));
-  const targets = document.querySelectorAll('.forged');
-  const sourceRect = source.getBoundingClientRect();
-
-  targets.forEach(t => {
-    if (t === source) return;
-    try {
-      const tVars = new Set(JSON.parse(t.dataset.variants));
-      // Check for any overlap
-      let overlap = false;
-      for (const v of sourceVars) { if (tVars.has(v)) { overlap = true; break; } }
-      if (!overlap) return;
-
-      const tRect = t.getBoundingClientRect();
-      const dx = tRect.left - sourceRect.left;
-      const dy = tRect.top - sourceRect.top;
-      const dist = Math.sqrt(dx*dx + dy*dy);
-      if (dist > window.innerHeight * 1.5) return; // Only nearby
-
-      const line = document.createElement('div');
-      line.className = 'myc-line';
-      line.style.left = (sourceRect.left + sourceRect.width/2) + 'px';
-      line.style.top = (sourceRect.top + sourceRect.height/2) + 'px';
-      line.style.width = dist + 'px';
-      line.style.transform = `rotate(${Math.atan2(dy,dx)}rad)`;
-      document.body.appendChild(line);
-      requestAnimationFrame(() => line.classList.add('show'));
-      setTimeout(() => { line.classList.remove('show'); setTimeout(() => line.remove(), 1500); }, 3000);
-    } catch(e) {}
-  });
-}
-
-// ---- PS cluster (operates on text nodes only, safe for pre-annotation) ----
+// ---- PS cluster (text-node safe, runs before any DOM annotation) ----
 function setupPs() {
   const psWords = ['psombee','psombees','psircle','psircles','Psibyl','psilence','psilent',
     'psunanimate','psaltered','psycophantic','psithurism','psithuring','psalsify','psoken','psycle'];
   const container = document.getElementById('text');
   const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT);
-  const replacements = [];
+  const reps = [];
   while (walker.nextNode()) {
     const node = walker.currentNode;
-    let html = node.textContent, changed = false;
+    let html = node.textContent, hit = false;
     for (const w of psWords) {
       const re = new RegExp(`(${w})`,'gi');
       if (re.test(html)) {
-        html = html.replace(re, m => { changed = true;
+        html = html.replace(re, m => { hit = true;
           return `<span class="ps-word"><span class="silent-p">p</span>${m.slice(1)}</span>`;
         });
       }
     }
-    if (changed) replacements.push({node, html});
+    if (hit) reps.push({node, html});
   }
-  replacements.reverse().forEach(({node, html}) => {
+  reps.reverse().forEach(({node, html}) => {
     const s = document.createElement('span'); s.innerHTML = html;
     node.parentNode.replaceChild(s, node);
   });
 }
 
-// ---- Termite simulation with persistent trails ----
+// ---- Termite simulation with persistent trail accumulation ----
 class Termites {
   constructor(termCanvas, trailCanvas) {
     this.tc = termCanvas; this.tctx = termCanvas.getContext('2d');
     this.rc = trailCanvas; this.rctx = trailCanvas.getContext('2d');
     this.bugs = []; this.scrollSpeed = 0; this.lastScroll = 0;
     this.resize();
-    for (let i=0; i<60; i++) this.bugs.push({
-      x:Math.random()*this.tc.width, y:Math.random()*this.tc.height,
-      a:Math.random()*Math.PI*2, s:0.5+Math.random(), tr:0.05+Math.random()*0.1,
-      sz:1+Math.random()*1.5
+    for (let i = 0; i < 60; i++) this.bugs.push({
+      x: Math.random()*this.tc.width, y: Math.random()*this.tc.height,
+      a: Math.random()*Math.PI*2, s: 0.5+Math.random(),
+      tr: 0.05+Math.random()*0.1, sz: 1+Math.random()*1.5
     });
     window.addEventListener('resize', () => this.resize());
     window.addEventListener('scroll', () => {
@@ -331,119 +215,164 @@ class Termites {
     });
   }
   resize() {
+    // Preserve trail canvas content across resize
+    const trailData = this.rc.width > 0 ? this.rctx.getImageData(0,0,this.rc.width,this.rc.height) : null;
     this.tc.width = this.rc.width = window.innerWidth;
     this.tc.height = this.rc.height = window.innerHeight;
+    if (trailData) this.rctx.putImageData(trailData, 0, 0);
   }
   update() {
-    const panic = Math.min(this.scrollSpeed / 50, 1); // 0=still, 1=fast scroll
+    const panic = Math.min(this.scrollSpeed / 50, 1);
     this.bugs.forEach(b => {
-      // Fast scroll = scatter (high turn rate, high speed)
-      // Still = start spiraling (converge turn rate)
       const turnMult = panic > 0.3 ? 3 : (this.scrollSpeed < 1 ? 0.3 : 1);
       b.a += (Math.random()-0.5) * b.tr * 2 * turnMult;
-
-      // Spiral when stopped
-      if (this.scrollSpeed < 1) b.a += 0.008;
-
-      // Center attraction (weaker when scrolling fast)
-      const dy = this.tc.height*0.5 - b.y, dx = this.tc.width*0.5 - b.x;
+      if (this.scrollSpeed < 1) b.a += 0.008; // Spiral when still
+      const dy = this.tc.height*0.5-b.y, dx = this.tc.width*0.5-b.x;
       b.a += (Math.atan2(dy,dx)-b.a) * (panic > 0.3 ? 0.001 : 0.008);
-
-      const spd = b.s * (1 + panic * 3);
+      const spd = b.s * (1 + panic*3);
       b.x += Math.cos(b.a)*spd; b.y += Math.sin(b.a)*spd;
-      if(b.x<0)b.x=this.tc.width; if(b.x>this.tc.width)b.x=0;
-      if(b.y<0)b.y=this.tc.height; if(b.y>this.tc.height)b.y=0;
+      if (b.x<0) b.x=this.tc.width; if (b.x>this.tc.width) b.x=0;
+      if (b.y<0) b.y=this.tc.height; if (b.y>this.tc.height) b.y=0;
     });
-    this.scrollSpeed *= 0.9; // decay
+    this.scrollSpeed *= 0.9;
   }
   draw() {
-    // Persistent trail layer (fades slowly)
+    // Trail layer: very slow fade + new marks
     this.rctx.fillStyle = 'rgba(10,8,6,0.003)';
     this.rctx.fillRect(0,0,this.rc.width,this.rc.height);
     this.rctx.fillStyle = 'rgba(139,105,20,0.12)';
-    this.bugs.forEach(b => this.rctx.fillRect(b.x,b.y,1,1));
+    this.bugs.forEach(b => this.rctx.fillRect(b.x, b.y, 1, 1));
 
-    // Termites
+    // Termite bodies
     this.tctx.clearRect(0,0,this.tc.width,this.tc.height);
     this.tctx.globalAlpha = 0.6;
     this.bugs.forEach(b => {
-      this.tctx.fillStyle='#c4b59a';
+      this.tctx.fillStyle = '#c4b59a';
       this.tctx.beginPath();
-      this.tctx.ellipse(b.x,b.y,b.sz*1.5,b.sz,b.a,0,Math.PI*2);
+      this.tctx.ellipse(b.x, b.y, b.sz*1.5, b.sz, b.a, 0, Math.PI*2);
       this.tctx.fill();
-      this.tctx.strokeStyle='rgba(196,181,154,0.3)'; this.tctx.lineWidth=0.5;
+      // Antennae
+      this.tctx.strokeStyle = 'rgba(196,181,154,0.3)'; this.tctx.lineWidth = 0.5;
       this.tctx.beginPath();
-      this.tctx.moveTo(b.x,b.y); this.tctx.lineTo(b.x+Math.cos(b.a+0.4)*b.sz*3,b.y+Math.sin(b.a+0.4)*b.sz*3);
-      this.tctx.moveTo(b.x,b.y); this.tctx.lineTo(b.x+Math.cos(b.a-0.4)*b.sz*3,b.y+Math.sin(b.a-0.4)*b.sz*3);
+      this.tctx.moveTo(b.x, b.y);
+      this.tctx.lineTo(b.x+Math.cos(b.a+0.4)*b.sz*3, b.y+Math.sin(b.a+0.4)*b.sz*3);
+      this.tctx.moveTo(b.x, b.y);
+      this.tctx.lineTo(b.x+Math.cos(b.a-0.4)*b.sz*3, b.y+Math.sin(b.a-0.4)*b.sz*3);
       this.tctx.stroke();
     });
-    this.tctx.globalAlpha=1;
+    this.tctx.globalAlpha = 1;
   }
-  run() { this.update(); this.draw(); requestAnimationFrame(()=>this.run()); }
+  run() { this.update(); this.draw(); requestAnimationFrame(() => this.run()); }
 }
 
 // ---- Mycelium background ----
 class Mycelium {
-  constructor(c) { this.c=c; this.ctx=c.getContext('2d'); this.b=[]; this.resize(); this.seed();
-    window.addEventListener('resize',()=>this.resize()); }
-  resize() { this.c.width=window.innerWidth; this.c.height=window.innerHeight; }
-  seed() { for(let i=0;i<8;i++) this.b.push({x:Math.random()*this.c.width,y:Math.random()*this.c.height,
-    a:Math.random()*Math.PI*2,l:0,ml:50+Math.random()*200,s:0.2+Math.random()*0.5,w:0.5+Math.random(),alive:true}); }
-  grow() {
-    const nb=[];
-    this.b.forEach(b=>{if(!b.alive)return; b.x+=Math.cos(b.a)*b.s; b.y+=Math.sin(b.a)*b.s;
-      b.a+=(Math.random()-0.5)*0.3; b.l+=b.s; if(b.l>b.ml)b.alive=false;
-      if(Math.random()<0.008&&this.b.length+nb.length<200) nb.push({x:b.x,y:b.y,a:b.a+(Math.random()-0.5)*1.5,
-        l:0,ml:b.ml*0.6,s:b.s*0.8,w:b.w*0.7,alive:true});
-    }); this.b.push(...nb);
+  constructor(c) {
+    this.c = c; this.ctx = c.getContext('2d'); this.b = [];
+    this.resize(); this.seed();
+    window.addEventListener('resize', () => this.resize());
   }
-  draw() { this.ctx.clearRect(0,0,this.c.width,this.c.height);
-    this.b.forEach(b=>{const a=Math.max(0,1-b.l/b.ml)*0.5; this.ctx.strokeStyle=`rgba(74,107,58,${a})`;
-      this.ctx.lineWidth=b.w; this.ctx.beginPath();
-      this.ctx.moveTo(b.x-Math.cos(b.a)*b.s,b.y-Math.sin(b.a)*b.s); this.ctx.lineTo(b.x,b.y); this.ctx.stroke(); }); }
-  run() { this.grow(); this.draw(); requestAnimationFrame(()=>this.run()); }
+  resize() { this.c.width = window.innerWidth; this.c.height = window.innerHeight; }
+  seed() {
+    for (let i = 0; i < 8; i++) this.b.push({
+      x:Math.random()*this.c.width, y:Math.random()*this.c.height,
+      a:Math.random()*Math.PI*2, l:0, ml:50+Math.random()*200,
+      s:0.2+Math.random()*0.5, w:0.5+Math.random(), alive:true
+    });
+  }
+  grow() {
+    const nb = [];
+    this.b.forEach(b => {
+      if (!b.alive) return;
+      b.x += Math.cos(b.a)*b.s; b.y += Math.sin(b.a)*b.s;
+      b.a += (Math.random()-0.5)*0.3; b.l += b.s;
+      if (b.l > b.ml) b.alive = false;
+      if (Math.random() < 0.008 && this.b.length+nb.length < 200)
+        nb.push({ x:b.x, y:b.y, a:b.a+(Math.random()-0.5)*1.5,
+          l:0, ml:b.ml*0.6, s:b.s*0.8, w:b.w*0.7, alive:true });
+    });
+    this.b.push(...nb);
+  }
+  draw() {
+    this.ctx.clearRect(0, 0, this.c.width, this.c.height);
+    this.b.forEach(b => {
+      const a = Math.max(0, 1-b.l/b.ml) * 0.5;
+      this.ctx.strokeStyle = `rgba(74,107,58,${a})`;
+      this.ctx.lineWidth = b.w;
+      this.ctx.beginPath();
+      this.ctx.moveTo(b.x-Math.cos(b.a)*b.s, b.y-Math.sin(b.a)*b.s);
+      this.ctx.lineTo(b.x, b.y);
+      this.ctx.stroke();
+    });
+  }
+  run() { this.grow(); this.draw(); requestAnimationFrame(() => this.run()); }
 }
 
-// ---- Spores ----
+// ---- Spore particles (Ch V) ----
 class Spores {
-  constructor() { this.s=[]; this.on=false; }
-  start() { if(this.on)return; this.on=true;
-    for(let i=0;i<40;i++){const e=document.createElement('div'); e.className='spore';
-      document.body.appendChild(e); this.s.push({e,x:Math.random()*innerWidth,y:innerHeight+Math.random()*100,
-        vx:(Math.random()-0.5)*0.5,vy:-0.3-Math.random()*0.7,life:1});}
-    this.run(); }
-  run() { if(!this.on)return; this.s.forEach(s=>{s.x+=s.vx+(Math.random()-0.5)*0.3; s.y+=s.vy; s.life-=0.001;
-    if(s.y<-20){s.y=innerHeight+20;s.life=1;} s.e.style.left=s.x+'px'; s.e.style.top=s.y+'px';
-    s.e.style.opacity=Math.max(0,s.life*0.5);}); requestAnimationFrame(()=>this.run()); }
-  stop() { this.on=false; this.s.forEach(s=>s.e.remove()); this.s=[]; }
+  constructor() { this.s = []; this.on = false; }
+  start() {
+    if (this.on) return; this.on = true;
+    for (let i = 0; i < 40; i++) {
+      const e = document.createElement('div'); e.className = 'spore';
+      document.body.appendChild(e);
+      this.s.push({ e, x:Math.random()*innerWidth, y:innerHeight+Math.random()*100,
+        vx:(Math.random()-0.5)*0.5, vy:-0.3-Math.random()*0.7, life:1 });
+    }
+    this.run();
+  }
+  run() {
+    if (!this.on) return;
+    this.s.forEach(s => {
+      s.x += s.vx + (Math.random()-0.5)*0.3; s.y += s.vy; s.life -= 0.001;
+      if (s.y < -20) { s.y = innerHeight+20; s.life = 1; }
+      s.e.style.left = s.x+'px'; s.e.style.top = s.y+'px';
+      s.e.style.opacity = Math.max(0, s.life*0.5);
+    });
+    requestAnimationFrame(() => this.run());
+  }
+  stop() { this.on = false; this.s.forEach(s => s.e.remove()); this.s = []; }
 }
 
-// ---- Text decay (Pseudoxylaria colonizing read text) ----
+// ---- Pseudoxylaria: text decay behind the reader ----
 function setupDecay() {
-  const paras = document.querySelectorAll('#text p:not(.fungus-voice)');
-  const decayChars = {'a':'á','e':'è','i':'ï','o':'ö','u':'ù','s':'ß','n':'ñ','t':'†'};
-  let decayInterval = setInterval(() => {
-    paras.forEach(p => {
+  const decayMap = {'a':'á','e':'è','i':'ï','o':'ö','u':'ù','s':'ß','n':'ñ','t':'†','r':'ŗ','l':'ł'};
+  setInterval(() => {
+    document.querySelectorAll('#text p:not(.fungus-voice)').forEach(p => {
       const rect = p.getBoundingClientRect();
-      // Only decay text that's been scrolled well past (above viewport)
-      if (rect.bottom < -window.innerHeight) {
-        if (!p.classList.contains('decayed')) {
-          p.classList.add('decayed');
-          // Mutate 1-2 characters
-          const text = p.innerHTML;
-          const plainChars = [...text.matchAll(/[a-z]/g)];
-          if (plainChars.length > 5) {
-            const pick = plainChars[Math.floor(Math.random() * plainChars.length)];
-            const ch = pick[0];
-            if (decayChars[ch]) {
-              const idx = pick.index;
-              p.innerHTML = text.slice(0,idx) + decayChars[ch] + text.slice(idx+1);
+      // Decay text that's been scrolled more than half a viewport past
+      if (rect.bottom < -window.innerHeight * 0.5) {
+        // Each check: 30% chance of mutating one character (accumulates over time)
+        if (Math.random() < 0.3) {
+          const text = p.textContent;
+          // Find a random lowercase letter
+          const candidates = [];
+          for (let i = 0; i < text.length; i++) {
+            if (decayMap[text[i]]) candidates.push(i);
+          }
+          if (candidates.length > 3) {
+            const idx = candidates[Math.floor(Math.random() * candidates.length)];
+            // Walk the DOM to find the actual text node at this offset
+            const walker = document.createTreeWalker(p, NodeFilter.SHOW_TEXT);
+            let offset = 0;
+            while (walker.nextNode()) {
+              const node = walker.currentNode;
+              if (offset + node.length > idx) {
+                const localIdx = idx - offset;
+                const ch = node.textContent[localIdx];
+                if (decayMap[ch]) {
+                  node.textContent = node.textContent.slice(0, localIdx) + decayMap[ch] + node.textContent.slice(localIdx + 1);
+                }
+                break;
+              }
+              offset += node.length;
             }
+            if (!p.classList.contains('decayed')) p.classList.add('decayed');
           }
         }
       }
     });
-  }, 8000); // Every 8 seconds, check for decay
+  }, 4000); // Check every 4 seconds — more aggressive than before
 }
 
 // ---- Scroll observers ----
@@ -452,54 +381,72 @@ function setupScroll() {
   const breach = document.getElementById('breach');
   const spores = new Spores();
 
-  new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }),
-    {threshold:0.1}).observe(document.querySelector('.chapter')); // observe first
-  chs.forEach(ch => new IntersectionObserver(es => es.forEach(e => {
-    if(e.isIntersecting) e.target.classList.add('visible');
-  }), {threshold:0.1}).observe(ch));
+  // Chapter visibility (fade in on scroll)
+  const visObs = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.05 });
+  chs.forEach(ch => visObs.observe(ch));
 
-  // Atmosphere
-  chs.forEach(ch => new IntersectionObserver(es => es.forEach(e => {
-    if(e.isIntersecting && e.intersectionRatio > 0.2) {
-      const cls = e.target.dataset.atm;
-      document.body.className = cls;
-      breach.classList.toggle('active', cls==='ch-4');
-      if(cls==='ch-5') spores.start(); else spores.stop();
-      if(cls==='ch-2'){document.body.classList.add('ps-active'); setTimeout(()=>document.body.classList.remove('ps-active'),2500);}
-    }
-  }), {threshold:0.2}).observe(ch));
+  // Chapter atmosphere (background color, breach, spores, ps-cluster)
+  chs.forEach(ch => {
+    new IntersectionObserver(es => {
+      es.forEach(e => {
+        if (e.isIntersecting && e.intersectionRatio > 0.15) {
+          const cls = e.target.dataset.atm;
+          document.body.className = cls;
 
-  // Ricorso
-  new IntersectionObserver(es => es.forEach(e => {
-    if(e.isIntersecting) setTimeout(()=>window.scrollTo({top:0,behavior:'smooth'}),2500);
-  }), {threshold:1}).observe(document.getElementById('ricorso'));
+          // Breach effect for Ch IV
+          breach.classList.toggle('active', cls === 'ch-4');
+
+          // Spores for Ch V
+          if (cls === 'ch-5') spores.start(); else spores.stop();
+
+          // PS silent-p flash for Ch II
+          if (cls === 'ch-2') {
+            document.body.classList.add('ps-active');
+            setTimeout(() => document.body.classList.remove('ps-active'), 2500);
+          }
+        }
+      });
+    }, { threshold: 0.15 }).observe(ch);
+  });
+
+  // Ricorso — loop back to start
+  new IntersectionObserver(es => {
+    es.forEach(e => {
+      if (e.isIntersecting) {
+        setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 2500);
+      }
+    });
+  }, { threshold: 1 }).observe(document.getElementById('ricorso'));
 }
 
 // ---- Init ----
 async function init() {
   const container = document.getElementById('text');
+
   for (const ch of CHAPTERS) {
     try {
       const resp = await fetch(ch.file);
-      if (!resp.ok) { console.error(`Failed to load ${ch.file}: ${resp.status}`); continue; }
+      if (!resp.ok) { console.error(`Failed: ${ch.file} (${resp.status})`); continue; }
       const md = await resp.text();
       const div = document.createElement('div');
-      div.className='chapter'; div.id=ch.id; div.dataset.atm=ch.cls;
+      div.className = 'chapter'; div.id = ch.id; div.dataset.atm = ch.cls;
       div.innerHTML = md2html(md);
       container.appendChild(div);
     } catch(e) { console.error(e); }
   }
 
-  setupPs();       // Must run BEFORE annotateWords to avoid corrupting data-attributes
-  annotateWords(container);
+  setupPs();
   setupScroll();
   setupDecay();
 
   new Termites(document.getElementById('termite-canvas'), document.getElementById('trail-canvas')).run();
   new Mycelium(document.getElementById('mycelium-canvas')).run();
 
-  setTimeout(()=>document.getElementById('loading').classList.add('hidden'), 1500);
+  setTimeout(() => document.getElementById('loading').classList.add('hidden'), 1500);
 }
+
 document.addEventListener('DOMContentLoaded', init);
 </script>
 </body>
