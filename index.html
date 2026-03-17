@@ -286,17 +286,29 @@ function drawMyceliumConnections(source, word) {
   });
 }
 
-// ---- PS cluster ----
+// ---- PS cluster (operates on text nodes only, safe for pre-annotation) ----
 function setupPs() {
-  const psWords = ['psombee','psircle','Psibyl','psilence','psilent','psunanimate',
-    'psaltered','psycophantic','psithurism','psithuring','psalsify','psoken','psycle'];
-  document.querySelectorAll('p,.fungus-voice').forEach(el => {
-    psWords.forEach(w => {
+  const psWords = ['psombee','psombees','psircle','psircles','Psibyl','psilence','psilent',
+    'psunanimate','psaltered','psycophantic','psithurism','psithuring','psalsify','psoken','psycle'];
+  const container = document.getElementById('text');
+  const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT);
+  const replacements = [];
+  while (walker.nextNode()) {
+    const node = walker.currentNode;
+    let html = node.textContent, changed = false;
+    for (const w of psWords) {
       const re = new RegExp(`(${w})`,'gi');
-      if (re.test(el.innerHTML))
-        el.innerHTML = el.innerHTML.replace(re, m =>
-          `<span class="ps-word"><span class="silent-p">p</span>${m.slice(1)}</span>`);
-    });
+      if (re.test(html)) {
+        html = html.replace(re, m => { changed = true;
+          return `<span class="ps-word"><span class="silent-p">p</span>${m.slice(1)}</span>`;
+        });
+      }
+    }
+    if (changed) replacements.push({node, html});
+  }
+  replacements.reverse().forEach(({node, html}) => {
+    const s = document.createElement('span'); s.innerHTML = html;
+    node.parentNode.replaceChild(s, node);
   });
 }
 
@@ -468,7 +480,9 @@ async function init() {
   const container = document.getElementById('text');
   for (const ch of CHAPTERS) {
     try {
-      const md = await (await fetch(ch.file)).text();
+      const resp = await fetch(ch.file);
+      if (!resp.ok) { console.error(`Failed to load ${ch.file}: ${resp.status}`); continue; }
+      const md = await resp.text();
       const div = document.createElement('div');
       div.className='chapter'; div.id=ch.id; div.dataset.atm=ch.cls;
       div.innerHTML = md2html(md);
@@ -476,8 +490,8 @@ async function init() {
     } catch(e) { console.error(e); }
   }
 
+  setupPs();       // Must run BEFORE annotateWords to avoid corrupting data-attributes
   annotateWords(container);
-  setupPs();
   setupScroll();
   setupDecay();
 
