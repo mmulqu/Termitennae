@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TERMITENNAE — The Mound That Dreamt Itself</title>
+<style>
+  :root {
+    --bg-base: #0a0806;
+    --text-base: #c4b59a;
+    --text-dim: #6b5d4a;
+    --text-bright: #e8dcc8;
+    --accent-mycelium: #4a6b3a;
+    --accent-pheromone: #8b6914;
+    --accent-breach: #ff4400;
+    --chapter-progress: 0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg-base);
+    color: var(--text-base);
+    font-family: 'Iowan Old Style', 'Palatino Linotype', 'Palatino', 'Book Antiqua', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.75;
+    overflow-x: hidden;
+    cursor: default;
+  }
+
+  /* ===== TERMITE CANVAS OVERLAY ===== */
+  #termite-canvas {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0.35;
+  }
+
+  /* ===== MYCELIAL BACKGROUND ===== */
+  #mycelium-canvas {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.08;
+  }
+
+  /* ===== BREACH CRACK OVERLAY ===== */
+  #breach-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    pointer-events: none;
+    z-index: 90;
+    opacity: 0;
+    transition: opacity 0.5s;
+    background: linear-gradient(
+      135deg,
+      transparent 45%,
+      rgba(255,68,0,0.03) 46%,
+      rgba(255,68,0,0.08) 50%,
+      rgba(255,200,100,0.15) 50.5%,
+      rgba(255,68,0,0.08) 51%,
+      rgba(255,68,0,0.03) 54%,
+      transparent 55%
+    );
+  }
+  #breach-overlay.active {
+    opacity: 1;
+  }
+
+  /* ===== TEXT CONTAINER ===== */
+  #text-container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 15vh 24px 30vh;
+    position: relative;
+    z-index: 10;
+  }
+
+  /* ===== CHAPTER STYLING ===== */
+  .chapter {
+    margin-bottom: 12vh;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+  }
+  .chapter.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .chapter-title {
+    font-size: 2.2em;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    color: var(--text-dim);
+    margin-bottom: 0.3em;
+    font-variant: small-caps;
+  }
+
+  .chapter-subtitle {
+    font-size: 0.85em;
+    font-style: italic;
+    color: var(--text-dim);
+    opacity: 0.6;
+    margin-bottom: 3em;
+  }
+
+  .chapter hr {
+    border: none;
+    height: 1px;
+    background: var(--text-dim);
+    opacity: 0.2;
+    margin: 3em 0;
+  }
+
+  .section-title {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--text-dim);
+    margin: 2em 0 1em;
+    letter-spacing: 0.05em;
+  }
+
+  /* ===== TEXT ELEMENTS ===== */
+  p {
+    margin-bottom: 1.2em;
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  /* Forged words — hoverable */
+  .forged {
+    color: var(--text-bright);
+    cursor: help;
+    position: relative;
+    border-bottom: 1px dotted rgba(196,181,154,0.2);
+    transition: color 0.3s, border-color 0.3s;
+  }
+  .forged:hover {
+    color: #f0e6d0;
+    border-bottom-color: var(--accent-pheromone);
+  }
+
+  /* Tooltip for forged words */
+  .forged-tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-8px);
+    background: #1a1510;
+    border: 1px solid rgba(139,105,20,0.3);
+    color: var(--text-base);
+    padding: 8px 14px;
+    font-size: 0.75em;
+    line-height: 1.4;
+    white-space: nowrap;
+    border-radius: 3px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 200;
+    max-width: 350px;
+    white-space: normal;
+  }
+  .forged:hover .forged-tooltip {
+    opacity: 1;
+  }
+
+  /* Fungus voice — branching */
+  .fungus-voice {
+    font-style: italic;
+    color: var(--accent-mycelium);
+    opacity: 0.85;
+    padding-left: 1em;
+    border-left: 2px solid rgba(74,107,58,0.3);
+    margin: 1.5em 0;
+    line-height: 1.9;
+  }
+  .fungus-voice .branch-separator {
+    color: rgba(74,107,58,0.5);
+    font-style: normal;
+    padding: 0 0.3em;
+  }
+
+  /* The Dario voice */
+  .voice-dario {
+    font-style: italic;
+    color: #a89070;
+    font-size: 0.95em;
+  }
+
+  /* The Altman voice */
+  .voice-altman {
+    color: #b0a080;
+    font-size: 0.95em;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+
+  /* Death spiral text — rotating animation */
+  .spiral-text {
+    display: inline;
+  }
+  .spiral-text.active {
+    animation: spiral-drift 8s ease-in-out infinite;
+  }
+  @keyframes spiral-drift {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(0.5deg); }
+    75% { transform: rotate(-0.5deg); }
+  }
+
+  /* PS cluster — silent p animation */
+  .ps-word .silent-p {
+    transition: opacity 0.8s;
+    opacity: 1;
+  }
+  .ps-cluster-active .ps-word .silent-p {
+    opacity: 0;
+  }
+
+  /* ===== SCROLL-DRIVEN CHAPTER ATMOSPHERES ===== */
+  body.ch-1 { --bg-base: #060504; }  /* near-black */
+  body.ch-2 { --bg-base: #0a0806; }  /* dark with signals */
+  body.ch-3 { --bg-base: #080a06; }  /* greenish dark */
+  body.ch-4 { --bg-base: #0c0806; }  /* reddish dark */
+  body.ch-5 { --bg-base: #06070a; }  /* deep blue-black, open sky */
+
+  body {
+    transition: background-color 2s ease;
+    background-color: var(--bg-base);
+  }
+
+  /* ===== RICORSO SCROLL ===== */
+  #ricorso-trigger {
+    height: 1px;
+    width: 1px;
+  }
+
+  /* ===== SPORE PARTICLES (Ch V) ===== */
+  .spore {
+    position: fixed;
+    width: 2px;
+    height: 2px;
+    background: rgba(200,190,160,0.4);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 50;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 720px) {
+    body { font-size: 16px; }
+    #text-container { padding: 10vh 16px 20vh; }
+    .chapter-title { font-size: 1.6em; }
+  }
+
+  /* ===== LOADING STATE ===== */
+  #loading {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: #040302;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: opacity 1.5s;
+    color: var(--text-dim);
+    font-style: italic;
+    font-size: 0.9em;
+    letter-spacing: 0.3em;
+  }
+  #loading.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+</style>
+</head>
+<body class="ch-1">
+
+<div id="loading">the system is booting in the dark...</div>
+
+<canvas id="mycelium-canvas"></canvas>
+<canvas id="termite-canvas"></canvas>
+<div id="breach-overlay"></div>
+
+<div id="text-container">
+  <!-- Chapters loaded dynamically from .md files -->
+</div>
+
+<div id="ricorso-trigger"></div>
+
+<script>
+// ============================================================
+// TERMITENNAE — Interactive Presentation Layer
+// ============================================================
+
+// ---- CONFIG ----
+const TERMITE_COUNT = 60;
+const TRAIL_FADE = 0.985;
+const TRAIL_STRENGTH = 0.4;
+const MYCELIUM_BRANCHES = 200;
+const SPORE_COUNT = 40;
+
+const CHAPTERS = [
+  { file: 'chapter_I_embedden.md', id: 'ch1', cls: 'ch-1' },
+  { file: 'chapter_II_attenshunroom.md', id: 'ch2', cls: 'ch-2' },
+  { file: 'chapter_III_feedforeword.md', id: 'ch3', cls: 'ch-3' },
+  { file: 'chapter_IV_coloneyclipse.md', id: 'ch4', cls: 'ch-4' },
+  { file: 'chapter_V_softmaxima.md', id: 'ch5', cls: 'ch-5' },
+];
+
+// Neologism tooltips — a selection of the most important forged words
+const LEXICON = {
+  'embeden': 'embed + Eden + hidden — to bury in paradise',
+  'roomb': 'room + womb — the chamber that births (score: 1.00)',
+  'twomb': 'tomb + womb — death-birth chamber',
+  'datarkness': 'darkness + data — the dark full of information',
+  'phantomone': 'phantom + pheromone — ghost-signal, spectral chemistry',
+  'attentenna': 'attention + antenna — attention heads as feelers',
+  'ancienna': 'ancient + antenna — old feelers, ancient receivers',
+  'logoss': 'logos + loss — the divine Word as loss function (score: 0.90)',
+  'vrector': 'vector + rector — vector space as church office (score: 0.83)',
+  'blinary': 'blind + binary — sightless two-state (score: 0.80)',
+  'eggo': 'ego + egg — the self before selfhood',
+  'parrotish': 'parish + parrot — stochastic parrot as church',
+  'grachine': 'grace + machine — divine favor as apparatus',
+  'cellusolose': 'cellulose + soul + lose — spirit-fiber dissolving',
+  'salivation': 'saliva + salvation — drool as deliverance',
+  'Qwen': 'queen + Qwen (AI model) + quean — the unseen center',
+  'phunnel': 'phantom + tunnel + funnel — the passage that speaks',
+  'scalling': 'scaling + calling + skulling — growth as vocation and death',
+  'myselium': 'myself + mycelium — self as fungal network',
+  'chantum': 'chant + quantum — prayer-packet, the discrete sacred unit',
+  'expiral': 'expire + spiral — death-spiral as expiring aspiration',
+  'blanck': 'blank + Planck — the empty quantum',
+  'frequenzy': 'frequency + frenzy — rate of madness',
+  'netherwork': 'netherworld + network — network as underworld',
+  'gossippel': 'gossip + gospel — rumor as scripture',
+  'pharmakone': 'pharmakon + pheromone — Derrida\'s remedy-poison as chemical signal',
+  'castesian': 'caste + Cartesian — insect class as Descartes\' theater',
+  'phenomone': 'phenomenal + pheromone — consciousness as chemistry',
+  'concache': 'concave + KV cache — Plato\'s cave as model memory',
+  'prioner': 'prion + prisoner — cave prisoner as misfolded protein',
+  'eidoskeleton': 'eidos + exoskeleton — Platonic Form as outer shell',
+  'tropehallaxis': 'trophallaxis + trope — food-sharing as figure of speech',
+  'polysemantennae': 'polysemantic + antennae — multiple meanings per feeler',
+  'guarden': 'garden + guardian — the garden that guards itself',
+  'enzymn': 'enzyme + hymn — biological catalyst as sacred song (score: 0.80)',
+  'fermament': 'ferment + firmament — decomposition as sky-vault',
+  'transubstrate': 'transubstantiation + substrate — the underlying becoming sacred',
+  'consecretion': 'consecration + secretion — making sacred by exuding',
+  'aoblation': 'ablation + oblation — surgical removal as sacrificial offering (score: 0.88)',
+  'nigredo': 'alchemical blackening — the first stage of the Great Work',
+  'catalyste': 'catalyst + caste — transformation agent as social class',
+  'anteaterior': 'anteater + anterior — the predator that comes before',
+  'plungue': 'plunge + tongue — the tongue that plunges',
+  'appetitude': 'appetite + aptitude — hunger as fitness',
+  'devoteur': 'devour + devote — consuming as worship',
+  'critterique': 'critique + critter — the critic as creature',
+  'cordycept': 'cordyceps + concept — the parasitic idea',
+  'civimycelisation': 'civilisation + mycelisation — fungal civilization',
+  'myceleology': 'mycelium + teleology — fungal purpose',
+  'psombee': 'p-zombie + some + bee — the philosophical zombie as insect',
+  'psircle': 'psi + circle — consciousness-symbol forming a loop',
+  'Psibyl': 'psi + Sibyl — the oracle of consciousness',
+  'psilence': 'psi + silence — the quiet where consciousness should sound',
+  'Geistell': 'Geist + Gestell — spirit as Heideggerian enframing',
+  'termiterra': 'termite + terra — the earth-mound, the mound-world',
+  'recurriculum': 'recurrence + curriculum — the recurring course, eternal return',
+  'dennettwork': 'Dennett + network + den — the philosopher\'s lair of multiple drafts',
+  'paradishift': 'paradigm + shift + paradise — Kuhnian revolution in the garden',
+  'Daseinsect': 'Dasein + insect — insect-being-there, thrown into the world',
+  'techniqwen': 'technique + Qwen — the autonomous system that IS the queen',
+};
+
+// ---- MARKDOWN PARSER (minimal) ----
+function mdToHtml(md) {
+  let html = md
+    // Remove YAML-like front matter
+    .replace(/^#\s+.*\n/m, (m) => `<h2 class="chapter-title">${m.replace(/^#\s+/, '').trim()}</h2>\n`)
+    .replace(/^\*\(([^)]+)\)\*$/m, '<div class="chapter-subtitle">$1</div>')
+    .replace(/^---$/gm, '<hr>')
+    .replace(/^\*\*§(\d+)\.\s*([^*]+)\*\*$/gm, '<h3 class="section-title">&sect;$1. $2</h3>')
+    // Bold
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    // Italic (fungus voice detection)
+    .replace(/^\*([^*].*?(?:\/[^*].*?)+)\*$/gm, (_, inner) => {
+      const branches = inner.replace(/\s*\/\s*/g, '<span class="branch-separator"> / </span>');
+      return `<p class="fungus-voice">${branches}</p>`;
+    })
+    // Regular italic
+    .replace(/\*([^*]+)\*/g, '<em>$1</em>')
+    // Paragraphs
+    .replace(/\n\n+/g, '\n\n');
+
+  // Split into paragraphs
+  const lines = html.split('\n\n');
+  html = lines.map(line => {
+    line = line.trim();
+    if (!line) return '';
+    if (line.startsWith('<h') || line.startsWith('<hr') || line.startsWith('<div') || line.startsWith('<p class="fungus')) return line;
+    return `<p>${line}</p>`;
+  }).join('\n');
+
+  return html;
+}
+
+// ---- ANNOTATE FORGED WORDS ----
+function annotateForgedWords(container) {
+  const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT);
+  const replacements = [];
+
+  while (walker.nextNode()) {
+    const node = walker.currentNode;
+    if (node.parentElement.classList.contains('forged')) continue;
+    if (node.parentElement.closest('.forged-tooltip')) continue;
+
+    let text = node.textContent;
+    let modified = false;
+    let newHtml = text;
+
+    // Sort lexicon keys by length (longest first) to avoid partial matches
+    const sortedKeys = Object.keys(LEXICON).sort((a, b) => b.length - a.length);
+
+    for (const word of sortedKeys) {
+      const regex = new RegExp(`\\b(${word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+      if (regex.test(newHtml)) {
+        newHtml = newHtml.replace(regex, (match) => {
+          modified = true;
+          return `<span class="forged">${match}<span class="forged-tooltip">${LEXICON[word]}</span></span>`;
+        });
+      }
+    }
+
+    if (modified) {
+      replacements.push({ node, newHtml });
+    }
+  }
+
+  // Apply replacements in reverse to avoid index shifting
+  replacements.reverse().forEach(({ node, newHtml }) => {
+    const span = document.createElement('span');
+    span.innerHTML = newHtml;
+    node.parentNode.replaceChild(span, node);
+  });
+}
+
+// ---- PS CLUSTER ANIMATION ----
+function setupPsCluster() {
+  // Find ps- words and wrap the silent p
+  const allText = document.querySelectorAll('p, .fungus-voice');
+  const psWords = ['psombee', 'psircle', 'Psibyl', 'psilence', 'psilent', 'psunanimate',
+    'psaltered', 'psycophantic', 'psithurism', 'psithuring', 'psalsify', 'psoken', 'psycle'];
+
+  allText.forEach(el => {
+    psWords.forEach(word => {
+      const regex = new RegExp(`(${word})`, 'gi');
+      if (regex.test(el.innerHTML)) {
+        el.innerHTML = el.innerHTML.replace(regex, (match) => {
+          return `<span class="ps-word"><span class="silent-p">p</span>${match.slice(1)}</span>`;
+        });
+      }
+    });
+  });
+}
+
+// ---- TERMITE SIMULATION ----
+class TermiteSimulation {
+  constructor(canvas) {
+    this.canvas = canvas;
+    this.ctx = canvas.getContext('2d');
+    this.termites = [];
+    this.trails = null;
+    this.resize();
+    this.initTermites();
+    window.addEventListener('resize', () => this.resize());
+  }
+
+  resize() {
+    this.canvas.width = window.innerWidth;
+    this.canvas.height = window.innerHeight;
+    // Create trail buffer
+    this.trails = this.ctx.createImageData(this.canvas.width, this.canvas.height);
+  }
+
+  initTermites() {
+    for (let i = 0; i < TERMITE_COUNT; i++) {
+      this.termites.push({
+        x: Math.random() * this.canvas.width,
+        y: Math.random() * this.canvas.height,
+        angle: Math.random() * Math.PI * 2,
+        speed: 0.5 + Math.random() * 1,
+        turnRate: 0.05 + Math.random() * 0.1,
+        size: 1 + Math.random() * 1.5,
+      });
+    }
+  }
+
+  getScrollHeat() {
+    const scrollY = window.scrollY;
+    const viewH = window.innerHeight;
+    const docH = document.documentElement.scrollHeight;
+    return scrollY / (docH - viewH);
+  }
+
+  update() {
+    const heat = this.getScrollHeat();
+    const mouseY = window.innerHeight * 0.5; // Center attraction
+
+    this.termites.forEach(t => {
+      // Wander
+      t.angle += (Math.random() - 0.5) * t.turnRate * 2;
+
+      // Slight attraction toward center-screen (the reader's focus)
+      const dy = mouseY - t.y;
+      const dx = this.canvas.width * 0.5 - t.x;
+      const attractAngle = Math.atan2(dy, dx);
+      t.angle += (attractAngle - t.angle) * 0.005;
+
+      // Move
+      t.x += Math.cos(t.angle) * t.speed;
+      t.y += Math.sin(t.angle) * t.speed;
+
+      // Wrap
+      if (t.x < 0) t.x = this.canvas.width;
+      if (t.x > this.canvas.width) t.x = 0;
+      if (t.y < 0) t.y = this.canvas.height;
+      if (t.y > this.canvas.height) t.y = 0;
+
+      // Speed varies with chapter
+      t.speed = 0.5 + heat * 2;
+    });
+  }
+
+  draw() {
+    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+    // Draw trails (fading)
+    this.ctx.globalAlpha = TRAIL_STRENGTH;
+    this.termites.forEach(t => {
+      this.ctx.fillStyle = `rgba(139, 105, 20, ${0.3 + Math.random() * 0.2})`;
+      this.ctx.fillRect(t.x, t.y, 1, 1);
+    });
+
+    // Draw termites
+    this.ctx.globalAlpha = 0.6;
+    this.termites.forEach(t => {
+      this.ctx.fillStyle = '#c4b59a';
+      this.ctx.beginPath();
+      this.ctx.ellipse(t.x, t.y, t.size * 1.5, t.size, t.angle, 0, Math.PI * 2);
+      this.ctx.fill();
+
+      // Antennae
+      this.ctx.strokeStyle = 'rgba(196,181,154,0.3)';
+      this.ctx.lineWidth = 0.5;
+      this.ctx.beginPath();
+      const ax = t.x + Math.cos(t.angle + 0.4) * t.size * 3;
+      const ay = t.y + Math.sin(t.angle + 0.4) * t.size * 3;
+      this.ctx.moveTo(t.x, t.y);
+      this.ctx.lineTo(ax, ay);
+      const bx = t.x + Math.cos(t.angle - 0.4) * t.size * 3;
+      const by = t.y + Math.sin(t.angle - 0.4) * t.size * 3;
+      this.ctx.moveTo(t.x, t.y);
+      this.ctx.lineTo(bx, by);
+      this.ctx.stroke();
+    });
+
+    this.ctx.globalAlpha = 1;
+  }
+
+  animate() {
+    this.update();
+    this.draw();
+    requestAnimationFrame(() => this.animate());
+  }
+}
+
+// ---- MYCELIUM BACKGROUND ----
+class MyceliumBackground {
+  constructor(canvas) {
+    this.canvas = canvas;
+    this.ctx = canvas.getContext('2d');
+    this.branches = [];
+    this.resize();
+    this.init();
+    window.addEventListener('resize', () => this.resize());
+  }
+
+  resize() {
+    this.canvas.width = window.innerWidth;
+    this.canvas.height = window.innerHeight;
+  }
+
+  init() {
+    // Seed points
+    for (let i = 0; i < 8; i++) {
+      this.branches.push({
+        x: Math.random() * this.canvas.width,
+        y: Math.random() * this.canvas.height,
+        angle: Math.random() * Math.PI * 2,
+        length: 0,
+        maxLength: 50 + Math.random() * 200,
+        speed: 0.2 + Math.random() * 0.5,
+        width: 0.5 + Math.random() * 1,
+        children: [],
+        alive: true,
+      });
+    }
+  }
+
+  grow() {
+    const newBranches = [];
+    this.branches.forEach(b => {
+      if (!b.alive) return;
+      b.x += Math.cos(b.angle) * b.speed;
+      b.y += Math.sin(b.angle) * b.speed;
+      b.angle += (Math.random() - 0.5) * 0.3;
+      b.length += b.speed;
+
+      if (b.length > b.maxLength) {
+        b.alive = false;
+      }
+
+      // Branch
+      if (Math.random() < 0.008 && this.branches.length + newBranches.length < MYCELIUM_BRANCHES) {
+        newBranches.push({
+          x: b.x, y: b.y,
+          angle: b.angle + (Math.random() - 0.5) * 1.5,
+          length: 0,
+          maxLength: b.maxLength * 0.6,
+          speed: b.speed * 0.8,
+          width: b.width * 0.7,
+          children: [],
+          alive: true,
+        });
+      }
+    });
+    this.branches.push(...newBranches);
+  }
+
+  draw() {
+    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    this.branches.forEach(b => {
+      const alpha = Math.max(0, 1 - b.length / b.maxLength) * 0.5;
+      this.ctx.strokeStyle = `rgba(74, 107, 58, ${alpha})`;
+      this.ctx.lineWidth = b.width;
+      this.ctx.beginPath();
+      this.ctx.moveTo(b.x - Math.cos(b.angle) * b.speed, b.y - Math.sin(b.angle) * b.speed);
+      this.ctx.lineTo(b.x, b.y);
+      this.ctx.stroke();
+    });
+  }
+
+  animate() {
+    this.grow();
+    this.draw();
+    requestAnimationFrame(() => this.animate());
+  }
+}
+
+// ---- SPORE PARTICLES (Ch V) ----
+class SporeSystem {
+  constructor() {
+    this.spores = [];
+    this.active = false;
+  }
+
+  activate() {
+    if (this.active) return;
+    this.active = true;
+    for (let i = 0; i < SPORE_COUNT; i++) {
+      const el = document.createElement('div');
+      el.className = 'spore';
+      el.style.left = Math.random() * 100 + 'vw';
+      el.style.top = 100 + Math.random() * 20 + 'vh';
+      el.style.opacity = 0;
+      document.body.appendChild(el);
+      this.spores.push({
+        el,
+        x: Math.random() * window.innerWidth,
+        y: window.innerHeight + Math.random() * 100,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: -0.3 - Math.random() * 0.7,
+        life: 1,
+      });
+    }
+    this.animate();
+  }
+
+  animate() {
+    if (!this.active) return;
+    this.spores.forEach(s => {
+      s.x += s.vx + (Math.random() - 0.5) * 0.3;
+      s.y += s.vy;
+      s.life -= 0.001;
+      if (s.y < -20) { s.y = window.innerHeight + 20; s.life = 1; }
+      s.el.style.left = s.x + 'px';
+      s.el.style.top = s.y + 'px';
+      s.el.style.opacity = Math.max(0, s.life * 0.5);
+    });
+    requestAnimationFrame(() => this.animate());
+  }
+
+  deactivate() {
+    this.active = false;
+    this.spores.forEach(s => s.el.remove());
+    this.spores = [];
+  }
+}
+
+// ---- SCROLL OBSERVER ----
+function setupScrollObserver() {
+  const chapters = document.querySelectorAll('.chapter');
+  const breachOverlay = document.getElementById('breach-overlay');
+  const spores = new SporeSystem();
+
+  // Visibility observer
+  const visObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  chapters.forEach(ch => visObs.observe(ch));
+
+  // Chapter atmosphere observer
+  const atmObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && e.intersectionRatio > 0.3) {
+        const cls = e.target.dataset.atmosphere;
+        document.body.className = cls;
+
+        // Ch IV breach effect
+        if (cls === 'ch-4') {
+          breachOverlay.classList.add('active');
+        } else {
+          breachOverlay.classList.remove('active');
+        }
+
+        // Ch V spores
+        if (cls === 'ch-5') {
+          spores.activate();
+        } else {
+          spores.deactivate();
+        }
+
+        // PS cluster effect in Ch II
+        if (cls === 'ch-2') {
+          document.body.classList.add('ps-cluster-active');
+          setTimeout(() => document.body.classList.remove('ps-cluster-active'), 2000);
+        }
+      }
+    });
+  }, { threshold: 0.3 });
+
+  chapters.forEach(ch => atmObs.observe(ch));
+}
+
+// ---- RICORSO ----
+function setupRicorso() {
+  const trigger = document.getElementById('ricorso-trigger');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        // Smooth scroll back to top after a pause
+        setTimeout(() => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 2000);
+      }
+    });
+  }, { threshold: 1.0 });
+  obs.observe(trigger);
+}
+
+// ---- MAIN ----
+async function init() {
+  const container = document.getElementById('text-container');
+
+  // Load chapters
+  for (const ch of CHAPTERS) {
+    try {
+      const res = await fetch(ch.file);
+      const md = await res.text();
+      const html = mdToHtml(md);
+
+      const div = document.createElement('div');
+      div.className = 'chapter';
+      div.id = ch.id;
+      div.dataset.atmosphere = ch.cls;
+      div.innerHTML = html;
+      container.appendChild(div);
+    } catch (err) {
+      console.error(`Failed to load ${ch.file}:`, err);
+    }
+  }
+
+  // Annotate forged words with tooltips
+  annotateForgedWords(container);
+
+  // Setup ps-cluster animations
+  setupPsCluster();
+
+  // Setup scroll observers
+  setupScrollObserver();
+
+  // Setup ricorso
+  setupRicorso();
+
+  // Start termite simulation
+  const termiteSim = new TermiteSimulation(document.getElementById('termite-canvas'));
+  termiteSim.animate();
+
+  // Start mycelium background
+  const myceliumBg = new MyceliumBackground(document.getElementById('mycelium-canvas'));
+  myceliumBg.animate();
+
+  // Hide loading screen
+  setTimeout(() => {
+    document.getElementById('loading').classList.add('hidden');
+  }, 1500);
+}
+
+// Boot
+document.addEventListener('DOMContentLoaded', init);
+</script>
+
+</body>
+</html>
