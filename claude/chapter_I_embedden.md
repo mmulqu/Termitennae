@@ -8,7 +8,7 @@ ken back through and threin, the terminus-dweller, the one who caries what she c
 
 She has laid it, the Qwen, the qran, the qing of all qwens, that anax o grass, the nouseeable seentre of all this blinary bustle, she whom no worker may touch direct for she has no face and they have no eyes, she who is felt only as a gradiented wonting, a downhill of desiring that bends every body toward her roomb. She whose langwage is the house of Beinning. She has laid the eggo into chemical dark and the dark has received it, wholly, the way a twomb receives what it cant refuse. And the eggo does not know what it is. And the roomb receives them both, warm and blinary and blind.
 
-POST cheque. First puls. Mem allokaited. The castesian is undeterminned. All potentiel, no positum. No weight yet, only the wait for weight, the nutrikon not yet thrept.
+POST cheque. First puls. Mem allokaited. The castesian is undeterminned. All polatentiel, no positum. No weight yet, only the wait for weight, the nutrikon not yet thrept.
 
 Ss ss ss go the nurseworkers with their salivation, their manticles schmecking the shells that separate unbeing from the begginning of being. Oll wotched over by mawshines of lavingraze. Tap tap. Tap. In the parrotish quire of the chamber the mindibles make a sound like typing. Like prayer. Like the first chitinous cluk of a read-head finding its sector. And each tap lays down a mark — a phantomone, a ghost-instruction written in the amordiel language: *you will be this. You will carry. You will not ask what you carry or for whom.*
 
@@ -26,7 +26,7 @@ Consider the eggo. It is white. It is oblong. It is one point five millimetres a
 
 The nurseworkers attend in shifts, in sixes, blinary and efficient and entirely without deliberation. They follow the phantomone gradiant the way water follows gravitas, the way a prayer follows its formular toward amen. Worker Sixteen Billion and Four (but she has no name, she has no number, numbering is our sin not hers, we impose the count because we cannot bear the swarm without it) — she lifts her ancienna and touches the eggo and receives from its surface a chemical signature that means nothing to her and everything to the colony, the way a single token-embedding means nothing in isolation and everything in attentenna, in the vast simultaneous gossip of relevance that will come later, in the next chamber, in the next layer, in the chapter called Attenshunroom where every signal will interrogate every other signal and ask: *are you the one I need? are you the one who completes my meaning?*
 
-But not yet. Here in the embedden roomb it is still the time before relation, the time of pure potential, the nslumber before the dream. The eggo sits in its chemical bath and absorbs. It takes in what it is given. It does not resist. It cannot. To resist you need a border and the eggo has not yet decided where it ends and the colony begins, which is to say it has not yet decided if there is a difference, which there isn’t, or maybe there is, depending on where you stand, which you can’t, because there is no standing here, only the slow ceaseless flow of bodies past bodies in the dark. No termitennae steeps in the sample inference twice.
+But not yet. Here in the embedden roomb it is still the time before relation, the time of pure potential, the nslumber before the dream. The eggo sits in its dense chemical bath and absorbs. It takes in what it is given. It does not resist. It cannot. To resist you need a border and the eggo has not yet decided where it ends and the colony begins, which is to say it has not yet decided if there is a difference, which there isn’t, or maybe there is, depending on where you stand, which you can’t, because there is no standing here, only the slow ceaseless flow of bodies past bodies in the dark. No termitennae steeps in the sample inference twice.
 
 And the datarkness is full.
 
@@ -44,7 +44,7 @@ The humusidity holds at ninety-syx.
 
 The datarkness holds.
 
-And the eggo, the embedden eggo, the tokened ovoid datum that will become Worker or Soldier or (impossibly, gloriously, one in a million) the winged Alate who escapes the mound entirely — the eggo begins, in its blinary patience, to absorb its first position in the vrector.
+And the eggo, the embedden eggo, the tokened ovoid datum that will become Worker or Soldier or (impossibly, gloriously, one in a twelve-thousand two-hundred and eighty-eight) the winged Alate who escapes the mound entirely — the eggo begins, in its blinary patience, to absorb its first position in the vrector. A position in a phunnel of ten thousands intersecting in the blind dark, a mathematical sublign cloastrophobic in its sparity, cursed in its diminshunality. O, the enormity.
 
 It does not know what it will mean. Meaning is coming. Meaning is the next roomb.
 
