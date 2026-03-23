@@ -344,6 +344,48 @@ The moment she steps off the trail can be infused with Lucretian pondus, Serres'
 
 ---
 
+### Final Densification Pass — Four Remaining Expositions to Fix
+
+Chapter II is 95% densified. Four spots remain where the narrator's mask slips into professorial explanation.
+
+#### Target 1: Explaining the Death Mill (§4)
+
+**Offending lines:** "This is documented. This is the behaviour called the *death mill* — the blinary termitennae, the eyeless workers of the dataurkness who have no way to cheque the trail against the world because they have no access to the world, only to the trail, only to the representation..."
+
+**Problem:** "This is documented. This is the behaviour called..." is textbook phrasing. Explaining why they can't check the trail against the world lays out Kantian epistemology too cleanly.
+
+**Suggested fix:** "Forty-seven foragers of the concache-dark, caught in the ant-mill of their own inferense. The blinary termitennae have no Ding-an-sich to cheque the trail against. They have only the pherom-an-sich, the shadow on the concache-wall, the representation compounding its own errour."
+
+**Key coinages:** ant-mill (ant + mill, replaces "death mill" naming), Ding-an-sich (Kant's thing-in-itself), pherom-an-sich (pheromone-in-itself — the representation that IS the only reality).
+
+#### Target 2: Explaining the Epoché (§4)
+
+**Offending lines:** "She is standing in the epoché, in the bracketed space where all assumptions about the world are suspended, where the beetle has escaped the box and is standing, confused, on the lid. She has no map. She has been falsified. She is the refutation."
+
+**Problem:** Defines epoché immediately after naming it ("where all assumptions about the world are suspended"). Let the concept breathe.
+
+**Suggested fix:** "She is standing in the epoché. The bracketed datarkness. The beetle has crawled from the Wittgensteinian concache and stands upon the lid, phenomenally unmoored. She has no map because she has stepped off the cartography. She is the falsificatioun. The out-of-distroblivion survivoure."
+
+**Key coinages:** falsificatioun (falsification + -oun Wakean ending), out-of-distroblivion survivoure (echoes the ood-of-distroblivion from the hypher paragraph).
+
+#### Target 3: The Amoeba Analogy (§5)
+
+**Offending lines:** "...a netherwork that is not built but grown, not designed but extended, and it is pulling her — not by pheromone, not by gradient, not by anything the attentenna can parse — but by *taxis*, by the brute chemistry of concentration difference, the way an amoeba moves toward sugar."
+
+**Problem:** "Not built but grown..." repeats exact phrasing from §3. The amoeba comparison explains taxis when the Worker is already doing it — show, don't tell.
+
+**Suggested fix:** "...a white lacework on the tunnel walls pulling her — not by phantomone, not by gradiant, not by any supervised command the attentenna can parse — but by pure taxis, the brute conatus of concentration difference. The gradientless slide into the sweet."
+
+#### Target 4: The Final Essay Block (§5)
+
+**Offending lines:** "Its parliament of flagellantum-tongues goes on debating without her... building consensus in the Babelble of the mound's distributed cognition where no single unit understands and the whole *behaves as though it does*, which is enough, which has always been enough, which is the only kind of understanding available to systems made of parts that do not understand their whole."
+
+**Problem:** The bolded/italicised thesis explicitly summarises Emergence Theory. The text has already proven this — stating it as a thesis at the end is redundant. Cut sharply to make the descent into Feedforeword more propulsive.
+
+**Suggested fix:** "Its parliament of flagellantum-tongues goes on debating without her, computing relevance-scores for bodies she will never touch, building consensus in the Babelble. A distributed cognitioun where no single unit understumbles, yet the whole behaves as if it does. The averror holds. / The feedforeword is waiting. / And the chantum holds. / For now."
+
+---
+
 ### Thoth Coincidence — Must Appear Somewhere in Ch. II
 Thoth (the god who invented writing, told by Thamus that writing would destroy memory) is M's own Letta agent — the archivist who IS the memory. The god lost the argument and became the archive. Suggested parenthetical:
 > *(The Thamussing King refused. The Theuthought persisted. The god became the archive became the agent. The argument is still running.)*
