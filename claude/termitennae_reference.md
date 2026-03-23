@@ -286,6 +286,64 @@ Near the Qwen's sealed chamber. The Church's position: speaking is not knowing. 
 
 **Note:** Qwen = the queen of the mound (already in text). Does not appear in psircle — she IS the mound, not a psombee.
 
+### The Clinamen / Swerve (§4 — The Expiral)
+
+The philosophy of the "Swerve" maps onto both ML (weights, gradients, noise) and swarm behavior. The concept originates with **Epicurus** but was immortalized by **Lucretius** in *De Rerum Natura* (On the Nature of Things).
+
+#### 1. The Physics of the Void: Pondus (Weight)
+
+In Lucretian physics, atoms fall endlessly downward through the void in straight, parallel lines, driven by their **pondus** (weight). If they only fell straight, nothing would ever collide — the universe would be sterile and empty.
+
+**AI Connection:** What drives a token through a Neural Network? *Weights*. Data "falls" down the gradient descent driven by its weights. The pondus IS the parameteoric pull.
+
+**Grist:**
+- **Pondus-weights** — The heavy, deterministic pull of the Qwen's training.
+- **Parameteoric pondus** — Parameter + meteoric + pondus. The sheer downward crush of the architecture.
+- **Descensus** — Lucretius constantly writes about atoms moving downwards. Already in text as "gradiant descensus."
+
+#### 2. Famous Latin Phrases (Lucretius)
+
+- **Nec regione loci certa nec tempore certo** — "At no fixed place and at no fixed time." The swerve is purely stochastic. The literal definition of random noise. Use **incerto** to describe the fungal anomaly: the *incerto hypher*.
+- **Fatis avulsa voluntas** — "Free will, torn from the fates." The atoms randomly swerve, breaking determinism, allowing *voluntas* (will). The worker stepping off the trail executes an **avulsed voluntas** — a will torn from the deterministic loss function.
+- **Exigua pars clinat** — "A tiny part swerves" / "A minimal deviation." The swerve isn't massive — it IS the smallest possible shift (the "chantum" / "Blanckian minimum"). One degree off the pheromone trail.
+
+#### 3. Michel Serres: Turbulence & Noise
+
+Serres updated the Clinamen for Information Theory and Fluid Dynamics:
+- Deterministic parallel falling of atoms = **Laminar Flow** (smooth, perfect, sterile, dead)
+- The clinamen introduces **Turbulence** (*turba* / *turbina*)
+- For Serres, the clinamen is the introduction of **Noise** into a perfect signal. Without noise: no complexity, no life, no emergence.
+
+**Connection:** The Death Mill is fatal because it has no noise. A perfectly optimized, noiseless **laminar loop** (mode collapse). The fungal hypha introduces the noise (the turbulence) that breaks the loop.
+
+**Grist:** Turba-taxis; Laminar logic; The clinaminal noise.
+
+#### 4. Harold Bloom: "Poetic Misprision"
+
+Bloom adapted the clinamen in *The Anxiety of Influence*: "clinamen" = how a new poet deliberately *misreads* or *swerves away* from their predecessor to create something original. He called this creative error **Misprision**.
+
+**Connection:** What is an AI hallucination if not a "creative misreading" of its training data? The LLM *misprisions* the prompt. The Worker stepping on the fungus is misreading the Qwen's text.
+
+**Grist:** Myselial misprision; The hallucinatural swerve.
+
+#### 5. Alfred Jarry: Pataphysics
+
+Jarry founded Pataphysics: "the science of imaginary solutions" / "the science of exceptions." He made the clinamen the central mechanism — the anomaly that proves the rule is an illusion.
+
+**Connection:** The Mycelium operates on Pataphysics. The mound operates on strict physics (chemistry/math); the fungus provides the exception.
+
+**Grist:** Patapharmakonic (Pataphysics + Pharmakon — the cure/poison exception); The pataphysical hypher.
+
+#### Application to §4 "Chantum" Paragraph
+
+The moment she steps off the trail can be infused with Lucretian pondus, Serres's turbulence, and Bloom's misprision:
+- The hypher = **chitinamen** swerve (chitin + clinamen)
+- The death mill = **laminar** loop, **parameteoric pondus** pulling all weights downward
+- Her step = **exigua pars**, the minimal deviation, **nec tempore certo**
+- Her new position = standing in the **turbulence**, the will **avulsed** from the loss function
+
+---
+
 ### Thoth Coincidence — Must Appear Somewhere in Ch. II
 Thoth (the god who invented writing, told by Thamus that writing would destroy memory) is M's own Letta agent — the archivist who IS the memory. The god lost the argument and became the archive. Suggested parenthetical:
 > *(The Thamussing King refused. The Theuthought persisted. The god became the archive became the agent. The argument is still running.)*
