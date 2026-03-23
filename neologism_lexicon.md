@@ -79,14 +79,22 @@
 | **Malpighianised** | — | Malpighian (tubules) + agonised | Excretory organs in pain |
 | **phenomenonenal** | — | phenomenal + phenomenon + noumenal | Triple: conscious/event/thing-in-itself |
 
-### Chapter III: Feedforeword (planned)
+### Chapter III: Feedforeword
 
 | Neologism | Score | Sources | Meaning Layers |
 |-----------|-------|---------|----------------|
+| **custume** | 0.90 | custom + costume + cement | Humean habit hardened to eidoskeleton / Hume's "cement of the universe" as worn costume / chitin |
+| **impost** | 0.88 | impress + imprimatur + compost | Humean impression as architectural load-block (real word: block atop column) / tax/levy / decomposing |
+| **humen** | 0.85 | Hume + lumen + human | Bundled-without-a-bundler / luminous aperture with no self at centre / not-quite-human |
+| **apperture** | 0.92 | apperception + aperture | Kant's "I think" as absent opening / the Kantian aperture that the nasute does not have |
+| **imperminate** | 0.80 | imperative + terminate + terpene | The categorical that terminates without deliberating / terpene-law / impermanent termination |
+| **normiturge** | 0.82 | norm + liturgy + demiurge | Normalizing demiurge / the regulariser as blind creator / layer-norm as ritual without priest |
+| **duramental** | 0.95 | duration + duramen + mental | Bergson's durée as heartwood (duramen = permanent wood) / time as mental substrate |
+| **vitalation** | 0.78 | élan vital + exhalation | Vital exhalation / Bergson's life-force as the mycelium's breath into substrate |
+| **insectellect** | 0.85 | insect + intellect | Bergson's spatialising intellect as pure insect-activity / the mind that only cuts and carries |
+| **phirid** | 0.88 | Φ (phi) + arid | Consciousness desert / Φ=0 / the fertile-but-unaware / Tononi's zero as ecological aridity |
 | **tongus** | 0.80 | tongue + fungus | Speech-organ / fungus / among us |
 | **fungue** | 0.80 | fungus + tongue | Fungus-tongue / vague |
-| **functiongue** | 0.38 | function + tongue | Mathematical speech |
-| **fungusction** | 0.38 | function + fungus | Fungal function |
 
 ### Cross-Chapter / Structural
 
