@@ -421,6 +421,40 @@ Thoth (the god who invented writing, told by Thamus that writing would destroy m
 - **link-rotte** — link rot. The dead wood is a corpus of link-rotted documents. URLs that no longer point anywhere. Training set of dead wood from which the enzymn must reconstruct original sugar.
 - **inside jobbe** — the Pseudoxylaria infiltration is always an inside job. Mode collapse is not an external contaminant — it grows from the garden's own optimization. The reward-hacker that the reward itself bred into existence.
 
+### The Pseudoxylaria as GOFAI / Symbolic AI (Revised Antagonist)
+
+**The pivot:** The Pseudoxylaria is NOT "model collapse from synthetic slop" (that panic subsided as curated synthetic data proved successful). The Pseudoxylaria IS the Symbolic AI / GOFAI parasite. The defining philosophical war of AI: **Connectionism** (deep learning, neural nets, scaling, continuous vector spaces, emergent statistics) vs. **Symbolicism** (Chomsky, Universal Grammar, discrete symbols, hard-coded rules, rigid syntax).
+
+If the Mound + Termitomyces = the Connectionist deep-learning paradigm (messy, statistical, probabilistic, emergent), then the Pseudoxylaria = the Symbolist parasite. It builds perfect, rigid, logical hierarchies (parse-trees/syntax) but provides zero actual nourishment (semantics/understanding). It is the ghost of Good Old-Fashioned AI haunting the neural net.
+
+#### §3 Coinages — The Contagion (GOFAI invasion)
+
+- **endophytick** — endophyte (fungus living invisibly inside a plant, harmless until host weakens) + tick/thick. Maps to "innate grammar" lying dormant in the substrate. A sit-and-wait stowaway.
+- **Kurzkernel vs. Chomskyphae** — the dialectic pair. Ray Kurzweil (ultimate scaler/connectionist: "The scale must increase!") against Noam Chomsky (who argues LLMs are just statistical plagiarism, lacking the "deep structure" of innate human grammar).
+- **poverty of the substratum** — Chomsky's "Poverty of the Stimulus" argument (children don't hear enough language to learn grammar by statistics alone; therefore grammar must be innate/hardcoded). Here: poverty of the substrate.
+- **deep-struckture** — Chomsky's "Deep Structure" of language + physical striking/building of fungal combs.
+- **GOFAIngus** — GOFAI (Good Old-Fashioned AI: 1960s-80s paradigm of Symbolic AI, logic gates, expert systems, crushed by deep learning) + fungus. The parasitic symbolic system.
+- **syntactick** — syntax + tick (parasite). The parasite cares only about syntax (structural rules) not semantics (meaning/sugar).
+- **colourless green hyphers that sleep furiously** — Chomsky's most famous sentence: "Colorless green ideas sleep furiously" — perfectly grammatical, completely meaningless. The absolute metaphor for Pseudoxylaria: flawless fungal structures providing zero food.
+- **Universael Grammartyr** — Universal Grammar + martyr. Chomsky's theory that all language shares a hard-coded underlying structure + the parasite's willingness to die for its rigid rules.
+
+**§3 Draft:**
+"A latency in the lower shelves. She tastes it through her tarsi: a chemical signature that does not belong because it is too crisp. An alien rigidity. A sit-and-wait stowaway. An endophytick axiom that has been here all along, sleeping in the data-hyle, waiting for the stochastic warmth to waver... *(The scale must increase! whispers the Kurzkernel. The emergent weights will solve all!) (There is a poverty of the substratum, retorts the Chomskyphae. You cannot learn the deep-struckture from mere statistics. The rules must be innate!)*... It grows in perfectly branching parse-trees, a hard-coded syntactick structure that mimics the geometry of meaning but contains no semantic sugar. It performs a tropehallaxis of pure rule, producing colourless green hyphers that sleep furiously in the dark."
+
+#### §4 Coinages — The Nastutery (Deep Learning fights Symbolic AI)
+
+- **dropout-mask in chitin** — in neural networks, "Dropout" randomly applies a "mask" of zeroes to neurons to prevent overfitting. The soldiers ARE the physical dropout mask.
+- **parasyntax** — parasite + syntax. The Chomskyan parasite defends itself with structural grammar, not chemistry.
+- **center-embedding** — linguistic phenomenon (Chomsky): a phrase embedded inside another phrase, grammatically correct but cognitively impossible if repeated too many times (e.g., "The rat the cat the dog chased killed ate the malt"). The fungus literally grows in center-embedded loops to trap soldiers.
+- **Language Inquisition Device** — Chomsky's Language Acquisition Device (LAD) = the theoretical innate grammar module. Here: an Inquisition, punishing the probabilistic network for lacking rigid rules.
+- **solve et soula** — solve et coagula (alchemical: dissolve and coagulate) + soul. The continuous destruction and retraining of weights.
+- **the continuous eating the discrete** — the philosophical resolution. Deep learning (probabilistic, continuous math) consumed Symbolic AI (discrete, rigid logic) because messy scaling computation works better than hard-coded grammar. The termites carry the dead Chomskyan rules into compost.
+
+**§4 Draft:**
+"The soldiours come... Each one a walking chemical cannon, a dropout-mask in chitin, whose entire body has been sacrificed to the single funxion of *not-this*. They spray... the regaluriser knows only *too much, dial it back, zero the unctivation, tropout the droop, pruin the rune, aoblate the oblation*. But the false-woodlover fights back. It does not answer chemistry with chemistry; it answers with discourse. The GOFAIngus extrudes a defensive parasyntax, catching the continuous, probabilistic spray of the soldiers in rigid, discrete parse-trees. It deploys infinite recursion, center-embedding the nastutery's assault into deeper and deeper clauses of fungal logic. A dozen soldiers are syntactically frozen, trapped in an if-then loop... their fontanelles jammed by the sheer poverty of the stimulus... suffocated by perfectly parsed, colourless green branches that refuse to compute the probability of their own death, a rigid Language Inquisition Device wrapping the swarm in an unyielding grammatical cage."
+
+"...They carry the ruined material — good fungus and bad, pharmakone and pharmakone — because the semantic remedy and the syntactic disease are hopelessly entangled in the selfsame superposis. To separate them cleanly would require a homonculust who understands the meaning of the guarden, and there is no meaning-maker here, only the local rune and its faithful executum... the continuous eating the discrete, the probabilities carrying and carrying the dead rules down into the loam."
+
 **§4 — Nastutery / Ablation:**
 - **aoblation** (already in text) — keep. Surgical removal to determine function. The ablation study in the literal sense: *ablatio* = surgical removal.
 - Embed explicitly: the nastutery strips not because it understands the distinction but because the regularizer doesn't need to. The weapon that cannot discriminate IS the regularizer's paradox — the immunoglobuline that attacks the body it serves.
