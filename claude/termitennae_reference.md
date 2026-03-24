@@ -456,6 +456,58 @@ The guarden has spatial intelligence only (Bergson: intellect evolved to manipul
 **Φ = 0 (feedforward):**
 Tononi's integrated information theory: feedforward networks have Φ = 0. They have no causal feedback, no integration. The guarden is a consciousness desert. Explicitly name this in §6 or closing.
 
+### Additional Coinages to Embed
+
+- **cross-pantropy loss** — cross-entropy loss + pantropy (adaptation of humans to alien environments, from Blish). The loss function that measures how well the colony adapts across all environments. The loss of becoming everything.
+- **larder space** — larder (food storage chamber in termite mound) + latent space. The compressed representation where all food-meaning is stored. The larder IS the latent space.
+- **cella** — inner sanctum of a Roman temple, houses the cult statue. The Qwen's chamber is a cella. The innermost room where the sacred object sits unseen. The cella of the guarden where the Termitomyces is kept.
+- **bitter lesson** — Rich Sutton's "The Bitter Lesson" (2019): computation always beats hand-crafted human knowledge. The colony learns this bitterly. The enzymn doesn't need to understand the wood; it only needs enough compute (mandibles, time, heat).
+- **Hinton** — Geoffrey Hinton, godfather of deep learning, who left Google warning about AI danger. Hide in text as a verb or adjective: "hintonned" = weighed down with foreboding, or a place: "the hinton" = the heavy back-part (hind + ton).
+- **Sutton** — Rich Sutton, reinforcement learning pioneer. Hide as: "sutton" = subtle + button, or the suture (sut- root), the stitching together of reward signals.
+- **manifold mastiplication** — manifold (the geometric surface in latent space) + mastication (chewing) + multiplication. The mandibles multiply meaning by chewing the manifold. The topology of chewed wood.
+- **non-ligninarity** — non-linearity + lignin. The lignin IS the non-linearity — the complex polymer that resists linear decomposition. Without non-ligninarity the enzymn would have nothing to transform. The activation function that makes the network more than a linear regression.
+- **hypherdimensional** — hypher + hyperdimensional. The mycelial network IS hyperdimensional — extending in dimensions the colony cannot perceive. Hypherdimensional explosion/expansion = the curse of dimensionality enacted in fungal form.
+- **byass** — bias + bypass + abyss. The bias term in the neural network, the thing that bypasses the weights, the abyss beneath the architecture.
+- **hyphalmorphism** — hypha + isomorphism/polymorphism. The structural equivalence between fungal and neural architectures. The hypher IS morphologically equivalent to the network — a hyphalmorphism.
+
+### Kant's Categories of the Understanding
+
+The fungus IS the Kantian category. The wood means nothing until it passes through the fungal filter. Kant argued we don't just "see" the world; our minds actively process raw sensory data (intuitions) through built-in filters (Categories) like Time, Space, and Causality.
+
+**Coinage:** Kategories of the Underchewing. "The raw input parsed by the Kategories of the Underchewing, without which the wood is blind, without which the enzymn is empty." (Playing on Kant's famous: "Thoughts without content are empty, intuitions without concepts are blind.")
+
+### Leibniz's Mill (expanded)
+
+Leibniz's famous argument against mechanical consciousness (1714). If you expand a thinking machine to the size of a mill and walk inside, you will just see gears pushing gears, but you will never find perception.
+
+**Coinage:** The Leibmühle. "She walks the aisles of the Leibmühle, finding enzymn working upon logitin, mandible working upon pellacement, but nowhere the locus of a thought."
+
+### Hume's Bundle Theory (expanded)
+
+The self is just a bundle of perceptions with no core "bundler." The worker is alienated from her labor. She carries the meaning but cannot comprehend it.
+
+**Coinage:** "A blinary bundle of chemotaxis with no bundler."
+
+### Foreshadowing the Disaster (The Contagion to Come)
+
+To make §3 (The Contagion) hit harder, plant seeds in §1 and §2 that the math/biology of the garden has a fatal flaw.
+
+#### The Optimization Blindspot (Goodhart's Law)
+
+If a system optimizes strictly for "sweetness" (reward), it will inevitably be hacked by something that produces fake sweetness.
+
+**Foreshadowing in §1:** Describe the sweetness of the transubstantiation as intoxicating or unquestioned. The system measures the chemical signature of sugar, not the truth of it.
+
+**Drafting line:** "The reward-funxion seeks only the sweet, and the sweet is whatever triggers the chemoreceptor, a perilous metric in a dark where the mimic is always learning the receptor's lock."
+
+#### The Dead Spots in the ReLUiquary
+
+The ReLU function sets all negative values to absolute zero. In AI, this causes "Dying ReLUs" — neurons that get stuck at zero and never fire again, creating dead, unmonitored zones in the network.
+
+**Foreshadowing in §2:** Parasites grow in the dead zones! The Pseudoxylaria will take root in the zeroed-out, ignored spaces of the combs.
+
+**Drafting line:** "It admits only the posituive... leaving vast shadow-combs of the null, dead zones of the zeroed unctivation where the gradients no longer flow, where the unmonitored dark begins to ferment its own quiet exceptions."
+
 ---
 
 ## CHAPTER IV — RESIDUELL CONNEXION / COLONEYCLIPSE
