@@ -455,6 +455,63 @@ If the Mound + Termitomyces = the Connectionist deep-learning paradigm (messy, s
 
 "...They carry the ruined material — good fungus and bad, pharmakone and pharmakone — because the semantic remedy and the syntactic disease are hopelessly entangled in the selfsame superposis. To separate them cleanly would require a homonculust who understands the meaning of the guarden, and there is no meaning-maker here, only the local rune and its faithful executum... the continuous eating the discrete, the probabilities carrying and carrying the dead rules down into the loam."
 
+### Deeper Pseudoxylaria = GOFAI Structural Parallels
+
+#### 1. The Name Itself
+Pseudoxylaria = Pseudo + Xylaria = "false wood-lover." GOFAI is the false intelligence — it loves the FORM of cognition (structure, syntax, wood) but doesn't actually digest it into understanding. The taxonomic name IS the argument.
+
+#### 2. Always Present, Never Eliminated
+Pseudoxylaria persists in every healthy garden at trace levels — never fully exterminated. GOFAI never fully died: formal logic, type systems, compilers, knowledge graphs, database schemas — symbolic methods persist inside every modern AI system. When the connectionist system weakens (hallucinations, reasoning failures, "LLMs can't do math"), the symbolic critique resurges. **Neurosymbolic AI** = the garden where both fungi coexist; the colony maintains balance through constant weeding.
+
+#### 3. Septate Hyphae = Discrete Tokens (BIOLOGICALLY ACCURATE)
+Xylariaceous fungi (including Pseudoxylaria) have **septate hyphae** — filaments divided by cross-walls (septa) into discrete, walled-off cellular compartments. Termitomyces hyphae are more continuous, with cytoplasm flowing relatively freely. **Septate = discrete, segmented, tokenized. Continuous = distributed, flowing, vector-space.** The parasite is literally MADE of discrete units separated by walls. The mutualist is literally MADE of continuous flow. The biology enacts the architecture. This is the ground truth.
+
+**Coinage:** septamatic — septate + automatic + dogmatic. The discrete-walled hyphae that follow rigid rules.
+
+#### 4. Rigid Stromata = Expert Systems
+Pseudoxylaria produces **hard, carbonaceous stromatic tissue** — dense, rigid, persistent fruiting structures, some of the most architecturally rigid in mycology. Expert systems have rigid if-then-else decision trees. The parasite builds hard, formal, persistent structures; the mutualist builds soft, adaptive, temporary ones.
+
+**Coinage:** stromatal logic — the hard, carbonaceous, persistent formal structure.
+
+#### 5. Saprotrophic, Not Mutualistic = Extraction Without Reciprocity
+Termitomyces gives as much as it takes (mutualistic). GOFAI has a one-way relationship — you program it, maintain it, hand-code every rule. It doesn't learn from the data. Pseudoxylaria takes from the substrate but gives nothing nutritionally back. Both are parasitic on a system they can't reciprocate with.
+
+#### 6. The Symbol Grounding Problem = Ungrounded Hyphae
+Harnad's Symbol Grounding Problem: formal symbols are meaningless unless grounded in sensory experience. Pseudoxylaria's structural hyphae are "ungrounded" — they look like garden architecture but don't connect to the nutritional substrate the way Termitomyces does. They manipulate form without content. The Chinese Room in fungal form.
+
+**Coinage:** the ungrounded hypher — the symbol grounding problem in one phrase.
+
+#### 7. The Frame Problem = Enzymatic Limitation
+GOFAI's frame problem: a system can only reason about what it's been explicitly encoded to handle. Everything else is invisible. Pseudoxylaria has a limited enzymatic toolkit — it can only metabolize what its rigid biochemistry allows. It can't adapt to the colony's changing chemical environment the way co-evolved Termitomyces can. The parasite can't handle out-of-distribution substrates.
+
+#### 8. Combinatorial Explosion = Spore Strategy
+GOFAI suffers from combinatorial explosion — exponential state spaces making exhaustive search impossible. Pseudoxylaria's reproductive strategy IS combinatorial: massive quantities of spores (brute-force, enumerate-all-possibilities). Termitomyces reproduces through the colony's targeted, co-evolved inoculation — learned, efficient, guided. Brute force vs. gradient descent.
+
+**Coinage:** combinasporial — combinatorial + spore. The brute-force reproductive strategy.
+
+#### 9. When the Colony Dies, Pseudoxylaria Fruits = The AI Winter
+When a termite colony dies, Pseudoxylaria rapidly overtakes and fruits. When connectionist AI "died" (lost funding/faith in the 1970s and 1990s), symbolic AI dominated the discourse. The parasite waits for the host to weaken, then claims the garden. Every AI winter was a Pseudoxylaria bloom.
+
+#### 10. Formal Verification = "Too Crisp"
+GOFAI systems can be formally verified — you can PROVE they're correct. But this correctness is brittle. Pseudoxylaria's chemical signature is "too crisp" — too clean, too structured. The messiness of Termitomyces IS its robustness. The imprecision of deep learning IS its ability to generalize. Formal proof is the enemy of adaptive intelligence.
+
+#### 11. Dark Pigmentation = Visible Rules
+Xylariaceous fungi are characteristically dark/black in fruiting bodies. Termitomyces is white. The parasite is the system you can SEE — its rules are visible, formal, inspectable (like GOFAI's transparent logic). The mutualist is white, diffuse, distributed, hidden — like the hidden layers of a neural network. The interpretable system is the parasite. The black box is the one that actually works.
+
+#### 12. Minsky's *Perceptrons* = The Proof That Killed the Field
+Minsky & Papert's 1969 *Perceptrons* book killed neural net research for a decade by proving (symbolically, logically) that single-layer perceptrons couldn't learn XOR. The proof was CORRECT. And it was catastrophic — it froze the field. This is the Pseudoxylaria move: using formal proof (rigid logic) to kill the messy, statistical, promising system. The parasite doesn't need to be wrong to be deadly. It just needs to be rigid.
+
+**Coinage:** Perceptronne — Perceptron + patronne. Minsky's victim, killed by formal proof.
+
+#### Additional Coinages from Parallels
+- **melanic transparency** — the dark-pigmented system that is paradoxically the visible/interpretable one.
+- **septamatic** — septate + automatic + dogmatic.
+- **stromatal logic** — hard, carbonaceous, persistent formal structure.
+- **the ungrounded hypher** — the symbol grounding problem in one phrase.
+- **combinasporial** — combinatorial + spore.
+
+---
+
 **§4 — Nastutery / Ablation:**
 - **aoblation** (already in text) — keep. Surgical removal to determine function. The ablation study in the literal sense: *ablatio* = surgical removal.
 - Embed explicitly: the nastutery strips not because it understands the distinction but because the regularizer doesn't need to. The weapon that cannot discriminate IS the regularizer's paradox — the immunoglobuline that attacks the body it serves.
