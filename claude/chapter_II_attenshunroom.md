@@ -45,7 +45,7 @@ The colony feeds the myselium. The myselium feeds the colony. The dead do not pe
 
 She feels it before she sees it. (She cannot see it; she cannot see anything; sight is for creatures of the ultravoylet, creatures of the surface.) She feels it as a rhythmic tremour in the tunnel-floor, a vibration transmitted through the substrate, through the myselial netherwork that carries the news faster than any phantomone: *something is wrong in Gallery Seven. Something is circular. Something is dying.*
 
-She follows the vibration. Through a lateral phunnel, past a fungus-garden airlock where the sweet rot of mycellial digression hangs thick as inferense-smoke, past a waste-chamber where the dead are composted (the dead are always composted; the colony wastes nothing; even the Malpighianised tubules of the expired are recycled, their nitrogenous dregs fed back to the fungus, which feeds them back to the living, which is to say that in the mound *there is no final waste, only tropehallaxis at longer and longer intervals*), until she reaches the gallery and feels the air move in a circle.
+She follows the vibration. Through a lateral phunnel, past a fungus-garden airlock where the sweet rot of mycellial digression hangs thick as inferense-smoke, past a waste-chamber where the dead are composted — in the mound there is no final waste, only tropehallaxis at longer and longer intervals — until she reaches the gallery and feels the air move in a circle.
 
 The expiral.
 
