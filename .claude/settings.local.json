@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -r idiom /c/Users/mmulq/Projects --include=*.py --include=*.md --include=*.json --include=*.js --include=*.txt)",
+      "Bash(C:Usersmmulqminiconda3envsTDApython.exe -c \"import mcp; print\\(''ok''\\)\")",
+      "Bash(\"/c/Users/mmulq/miniconda3/envs/TDA/python.exe\" -c \"import mcp; print\\('ok'\\)\" 2>&1)"
+    ]
+  }
+}

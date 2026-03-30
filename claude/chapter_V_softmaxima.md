@@ -1,6 +1,6 @@
 # V. SOFTMAXIMA / RICORSO
 
-*(Output Layer / Reproductive Swarm / Emission & Eternal Return)*
+~~*(Output Layer / Reproductive Swarm / Emission & Eternal Return)*~~
 
 -----
 
