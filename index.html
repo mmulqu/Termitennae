@@ -77,6 +77,9 @@
   /* Decayed text — the Pseudoxylaria effect */
   p.decayed { color: var(--dim); transition: color 4s; }
 
+  /* Termite-eaten characters — progressive consumption */
+  .termite-eaten { transition: opacity 0.8s, color 0.8s; display: inline; }
+
   /* Spores */
   .spore {
     position:fixed; width:2px; height:2px;
@@ -263,7 +266,7 @@ class Termites {
     });
     this.tctx.globalAlpha = 1;
   }
-  run() { this.update(); this.draw(); requestAnimationFrame(() => this.run()); }
+  run() { this.update(); this.draw(); if (this.chewer) this.chewer.check(this.bugs); requestAnimationFrame(() => this.run()); }
 }
 
 // ---- Mycelium background ----
@@ -333,6 +336,115 @@ class Spores {
     requestAnimationFrame(() => this.run());
   }
   stop() { this.on = false; this.s.forEach(s => s.e.remove()); this.s = []; }
+}
+
+// ---- Text chewing: termites eat through characters ----
+// Uses Canvas measureText (same technique as chenglou/pretext) to compute
+// per-character positions, then detects collisions with termite bugs.
+class TextChewer {
+  constructor() {
+    this.maps = [];
+    this._c = document.createElement('canvas');
+    this._x = this._c.getContext('2d');
+    this.frame = 0;
+  }
+  build() {
+    this.maps = [];
+    document.querySelectorAll('#text p:not(.fungus-voice)').forEach(p => {
+      const text = p.textContent;
+      if (!text.trim()) return;
+      const cs = getComputedStyle(p);
+      this._x.font = `${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+      const lh = parseFloat(cs.lineHeight) || parseFloat(cs.fontSize) * 1.75;
+      const mw = p.clientWidth;
+      const chars = [];
+      let x = 0, y = 0, i = 0;
+      while (i < text.length) {
+        const isSp = /\s/.test(text[i]);
+        let j = i;
+        while (j < text.length && (/\s/.test(text[j]) === isSp)) j++;
+        const seg = text.slice(i, j);
+        if (isSp) {
+          for (const ch of seg) {
+            const w = ch === '\n' ? 0 : this._x.measureText(ch).width;
+            chars.push({ch, x, y, w, h: lh, stage: 0, span: null, cd: 0, ci: chars.length});
+            if (ch === '\n') { x = 0; y += lh; } else x += w;
+          }
+        } else {
+          if (x > 0 && x + this._x.measureText(seg).width > mw) { x = 0; y += lh; }
+          for (const ch of seg) {
+            const w = this._x.measureText(ch).width;
+            chars.push({ch, x, y, w, h: lh, stage: 0, span: null, cd: 0, ci: chars.length});
+            x += w;
+          }
+        }
+        i = j;
+      }
+      this.maps.push({el: p, chars});
+    });
+  }
+  check(bugs) {
+    if (++this.frame % 4 !== 0) return;
+    const vh = window.innerHeight;
+    for (const m of this.maps) {
+      const r = m.el.getBoundingClientRect();
+      if (r.bottom < -50 || r.top > vh + 50) continue;
+      for (const c of m.chars) if (c.cd > 0) c.cd--;
+      for (const b of bugs) {
+        if (b.x < r.left - 15 || b.x > r.right + 15 ||
+            b.y < r.top - 15 || b.y > r.bottom + 15) continue;
+        for (const c of m.chars) {
+          if (c.stage >= 3 || /\s/.test(c.ch) || c.cd > 0) continue;
+          const dx = b.x - (r.left + c.x + c.w / 2);
+          const dy = b.y - (r.top + c.y + c.h * 0.35);
+          if (dx * dx + dy * dy < (b.sz * 5) * (b.sz * 5)) {
+            if (Math.random() < 0.12) {
+              c.stage++;
+              c.cd = 20;
+              this._eat(m.el, m.chars, c);
+            }
+          }
+        }
+      }
+    }
+  }
+  _eat(p, chars, target) {
+    if (target.span) {
+      this._style(target.span, target.stage);
+      return;
+    }
+    const ci = target.ci;
+    const walker = document.createTreeWalker(p, NodeFilter.SHOW_TEXT);
+    let off = 0;
+    while (walker.nextNode()) {
+      const n = walker.currentNode;
+      // Skip text inside already-eaten spans
+      if (n.parentNode.classList && n.parentNode.classList.contains('termite-eaten')) {
+        off += n.length; continue;
+      }
+      if (off + n.length > ci) {
+        const li = ci - off;
+        const before = n.textContent.slice(0, li);
+        const after = n.textContent.slice(li + 1);
+        const span = document.createElement('span');
+        span.textContent = target.ch;
+        span.className = 'termite-eaten';
+        this._style(span, target.stage);
+        const parent = n.parentNode;
+        if (after) parent.insertBefore(document.createTextNode(after), n.nextSibling);
+        parent.insertBefore(span, n.nextSibling);
+        if (before) n.textContent = before; else parent.removeChild(n);
+        target.span = span;
+        break;
+      }
+      off += n.length;
+    }
+  }
+  _style(span, stage) {
+    if (stage === 1) { span.style.opacity = '0.45'; span.style.color = '#8b7355'; }
+    else if (stage === 2) { span.style.opacity = '0.2'; span.style.color = '#6b5d4a'; }
+    else { span.style.opacity = '0.04'; }
+  }
 }
 
 // ---- Pseudoxylaria: text decay behind the reader ----
@@ -442,7 +554,13 @@ async function init() {
   setupScroll();
   setupDecay();
 
-  new Termites(document.getElementById('termite-canvas'), document.getElementById('trail-canvas')).run();
+  const chewer = new TextChewer();
+  // Build character map after a brief delay so layout has settled
+  requestAnimationFrame(() => { chewer.build(); });
+
+  const termites = new Termites(document.getElementById('termite-canvas'), document.getElementById('trail-canvas'));
+  termites.chewer = chewer;
+  termites.run();
   new Mycelium(document.getElementById('mycelium-canvas')).run();
 
   setTimeout(() => document.getElementById('loading').classList.add('hidden'), 1500);
