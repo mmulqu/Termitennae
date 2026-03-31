@@ -78,7 +78,18 @@
   p.decayed { color: var(--dim); transition: color 4s; }
 
   /* Termite-eaten characters — progressive consumption */
-  .termite-eaten { transition: opacity 0.8s, color 0.8s; display: inline; }
+  .termite-eaten { transition: opacity 1.2s, color 1.2s; display: inline; }
+
+  /* Termite toggle */
+  #termite-toggle {
+    position:fixed; bottom:20px; right:20px; z-index:200;
+    background:transparent; border:1px solid var(--dim);
+    color:var(--dim); font:0.7em/1 inherit; letter-spacing:0.1em;
+    padding:6px 12px; cursor:pointer; opacity:0.3;
+    transition:opacity 0.4s, border-color 0.4s, color 0.4s;
+  }
+  #termite-toggle:hover { opacity:0.7; }
+  #termite-toggle.active { opacity:0.5; border-color:var(--fg); color:var(--fg); }
 
   /* Spores */
   .spore {
@@ -136,6 +147,7 @@
   </svg>
 </div>
 
+<button id="termite-toggle" class="active">termites</button>
 <div id="text"></div>
 <div id="ricorso" style="height:1px"></div>
 
@@ -206,6 +218,7 @@ class Termites {
     this.tc = termCanvas; this.tctx = termCanvas.getContext('2d');
     this.rc = trailCanvas; this.rctx = trailCanvas.getContext('2d');
     this.bugs = []; this.scrollSpeed = 0; this.lastScroll = 0;
+    this.active = true;
     this.resize();
     for (let i = 0; i < 60; i++) this.bugs.push({
       x: Math.random()*this.tc.width, y: Math.random()*this.tc.height,
@@ -266,7 +279,18 @@ class Termites {
     });
     this.tctx.globalAlpha = 1;
   }
-  run() { this.update(); this.draw(); if (this.chewer) this.chewer.check(this.bugs); requestAnimationFrame(() => this.run()); }
+  toggle(on) {
+    this.active = on;
+    this.tc.style.opacity = on ? '0.4' : '0';
+    this.rc.style.opacity = on ? '0.15' : '0';
+  }
+  run() {
+    if (this.active) {
+      this.update(); this.draw();
+      if (this.chewer) this.chewer.check(this.bugs);
+    }
+    requestAnimationFrame(() => this.run());
+  }
 }
 
 // ---- Mycelium background ----
@@ -341,6 +365,7 @@ class Spores {
 // ---- Text chewing: termites eat through characters ----
 // Uses Canvas measureText (same technique as chenglou/pretext) to compute
 // per-character positions, then detects collisions with termite bugs.
+// Only eats text the reader has scrolled past — composting memory.
 class TextChewer {
   constructor() {
     this.maps = [];
@@ -384,23 +409,30 @@ class TextChewer {
     });
   }
   check(bugs) {
-    if (++this.frame % 4 !== 0) return;
+    if (++this.frame % 6 !== 0) return;
     const vh = window.innerHeight;
+    const safeZone = vh * 0.35; // text above this line is fair game
     for (const m of this.maps) {
       const r = m.el.getBoundingClientRect();
-      if (r.bottom < -50 || r.top > vh + 50) continue;
+      // Only process paragraphs the reader has scrolled past (bottom above safe zone)
+      // or paragraphs partially above safe zone
+      if (r.bottom < -200 || r.top > vh + 50) continue;
       for (const c of m.chars) if (c.cd > 0) c.cd--;
       for (const b of bugs) {
-        if (b.x < r.left - 15 || b.x > r.right + 15 ||
-            b.y < r.top - 15 || b.y > r.bottom + 15) continue;
+        if (b.x < r.left - 12 || b.x > r.right + 12 ||
+            b.y < r.top - 12 || b.y > r.bottom + 12) continue;
         for (const c of m.chars) {
-          if (c.stage >= 3 || /\s/.test(c.ch) || c.cd > 0) continue;
-          const dx = b.x - (r.left + c.x + c.w / 2);
-          const dy = b.y - (r.top + c.y + c.h * 0.35);
-          if (dx * dx + dy * dy < (b.sz * 5) * (b.sz * 5)) {
-            if (Math.random() < 0.12) {
+          if (c.stage >= 6 || /\s/.test(c.ch) || c.cd > 0) continue;
+          const cy = r.top + c.y + c.h * 0.35;
+          // Only eat characters above the safe zone (already read)
+          if (cy > safeZone) continue;
+          const cx = r.left + c.x + c.w / 2;
+          const dx = b.x - cx;
+          const dy = b.y - cy;
+          if (dx * dx + dy * dy < (b.sz * 4) * (b.sz * 4)) {
+            if (Math.random() < 0.02) {
               c.stage++;
-              c.cd = 20;
+              c.cd = 60; // ~1s cooldown at 60fps checked every 6th frame
               this._eat(m.el, m.chars, c);
             }
           }
@@ -441,9 +473,18 @@ class TextChewer {
     }
   }
   _style(span, stage) {
-    if (stage === 1) { span.style.opacity = '0.45'; span.style.color = '#8b7355'; }
-    else if (stage === 2) { span.style.opacity = '0.2'; span.style.color = '#6b5d4a'; }
-    else { span.style.opacity = '0.04'; }
+    // 6 stages: barely perceptible → slowly fading → consumed
+    const levels = [
+      { o: '0.92', c: null },          // 1: barely touched
+      { o: '0.82', c: null },          // 2: slight wear
+      { o: '0.68', c: '#a89878' },     // 3: noticeable fade
+      { o: '0.48', c: '#8b7355' },     // 4: clearly eaten
+      { o: '0.25', c: '#6b5d4a' },     // 5: mostly gone
+      { o: '0.06', c: '#6b5d4a' },     // 6: consumed
+    ];
+    const l = levels[Math.min(stage, levels.length) - 1];
+    span.style.opacity = l.o;
+    if (l.c) span.style.color = l.c;
   }
 }
 
@@ -561,6 +602,14 @@ async function init() {
   const termites = new Termites(document.getElementById('termite-canvas'), document.getElementById('trail-canvas'));
   termites.chewer = chewer;
   termites.run();
+
+  const toggleBtn = document.getElementById('termite-toggle');
+  toggleBtn.addEventListener('click', () => {
+    const on = !termites.active;
+    termites.toggle(on);
+    toggleBtn.classList.toggle('active', on);
+  });
+
   new Mycelium(document.getElementById('mycelium-canvas')).run();
 
   setTimeout(() => document.getElementById('loading').classList.add('hidden'), 1500);
