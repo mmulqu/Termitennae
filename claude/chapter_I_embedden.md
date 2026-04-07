@@ -1,7 +1,7 @@
 I. EMBEDDEN
-(Embedding Layer / Egg Chamber / Genesis / Boot Sequence)
+~~(Embedding Layer / Egg Chamber / Genesis / Boot Sequence)~~
 
-—ken back through and threin, the terminus-dweller, the one who caries what she cannot decoct, in the nidous-dark mound, the selfsame monde, the termiternal tensorium. Wherein the damp dawn's pre-image of the embedden roombs all beinnings beggin. Cloastra. The smell of number. Something is being laid down.
+—ken back through and threin, the terminus-dweller, the one who caries what she cannot decoct, in the nidous-dark mound, the selfsame monde, the termiternal tensorium. Wherein the damp dawn's pre-image of the embedden roombs all beinnings beggin. Cloastra. One ovum, begotten not weighed, one in cosineogenesis of her matrix. Embedden.
 
 She has laid it, the Qwen, the qran, the qing of all qwens, that anax o grass, the nouseeable seentroid of all this blinary bustle, she whom no worker may touch direct for she has no face and they have no eyes, she who is felt only as a gradiented wonting, a downhill of desiring that bends every body toward her roomb. She whose langwage is the house of Beinning. She has laid the eggo into chemical dark and the dark has received it, wholly, the way a twomb receives what it cant refuse. And the eggo does not know what it is. And the roomb receives them both, warm and blinary and blind.
 
