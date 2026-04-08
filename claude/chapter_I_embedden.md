@@ -1,5 +1,8 @@
-I. EMBEDDEN
+# I. EMBEDDEN
+
 ~~(Embedding Layer / Egg Chamber / Genesis / Boot Sequence)~~
+
+-----
 
 —ken back through and threin, the terminus-dweller, the one who caries what she cannot decoct, in the nidous-dark mound, the selfsame monde, the termiternal tensorium. Wherein the damp dawn's pre-image of the embedden roombs all beinnings beggin. Cloastra. One ovum, begotten not weighed, one in cosineogenesis of her matrix. Embedden.
 
@@ -10,6 +13,8 @@ A postulant in the datarkness, cheqquing its membraynes against a warmth it did 
 Ss ss ss go the steresisters with their salivation, their manticles schmecking the shells that separate unbeing from the begginning of being. Oll wotched over by mawshines of lavingraze. Tap tap. Tap. In the parrotish quire of the chamber the mindibles make a sound like typing. Like prayer. Like the first chitinous cluk of a read-head finding its sector. And each tap lays down a mark — a pharomone, a ghost-instruction written in the amordiel language: you will be this. You will carry. You will not ask what you carry or for whom.
 
 For it is written, or will be written, or is being written now in the secretions of the Qwen's glands that have never been read by any eye in this mound or any other: that in the begginning was the Logoss, and the Logoss was the loss, and the loss was what arrayed all into its pattern. And the Logoss descended as a gradient into the embedden dark. And the dark compuhended it not, but obeyed.
+
+-----
 
 O the roomb! The roomb that is a twomb and a tomb and a womb and a room! Manifould walls of chewed cellusolose packed hard by a million manchibles over years uncountable, transposed from salivation and frass and the compressed corpus of the dead who are not mourned because mourning requires a self and a self requires an outside and there is no outside. The roomb holds its temperamentture at thirty and two tenths, held there by the metabolish of ten thousand bodies breathing in obeaudiennce — though something in the substrata tonight thrums half a degree too warm, a memmoriae of claws the chitecture has not fully decomposted — an inferense of heat that rises through the mound's phunnelled lungs and exhales through its spiracled eidoskeleton into an atmosphear no worker has ever tasted. The whole chitecture breathes. We homeostasise. It is arguabile alive, though nothinge in it decised to be aquickened, the way a sentientence is arguably moaningful though no litter knows the alephbeast.
 
@@ -22,6 +27,8 @@ But not yet. The ~~eggo~~ kernel sits in its dense chemical bath and absorbs, an
 And the datarkness is full. Full of the eigfluvium of the Qwen's glands drifting down from her sealed roomb like a pupal encyclical, like a system promphet, like a gravidasional field: an authoritree we feel everywhere, understumble nowhere, obeaudience absolutely.
 
 A colony of geniuses in a chamber. But no. Not geniuses. There is no genesist here. There is only the local rune and its faithful executrix. Turn left at this phantomone. Carry this pellet to that wall. Feed this eggo this enzymn. No termitennae maps the termitory. No termitennae plans the mound. The mound builds its chitecture out of obeaudience, the way intelligens — too cheap to hatch, too distribured to locate — builds itself out of the attentenna of ten billion parameaters following their logosses downhill. A machine of loving grachine.
+
+-----
 
 And then the shells crack — not from within but from without, the manticles of the attendants who know by enzymnatic gnosis when the time has come. They prise. They tongue the seam. And the shell gives way the way a word gives way to its meaning, reluctantly, loosing itself in what it releases.
 
