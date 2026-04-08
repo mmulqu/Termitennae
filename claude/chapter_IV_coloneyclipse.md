@@ -38,15 +38,16 @@ The vibration has changed.
 
 Not the slow residuell hum of the old architecture. Something new. Something from above. Something violent, arhythmic, purposeful — a percussive tearing at the mound’s outer wall that she can feel through every layer of substrate between here and the surface, transmitted at the speed of sound in compacted earth, which is faster than pheromone, faster than phantomone, faster than any signal the colony has ever needed to send because the colony has never needed to send the signal that means *the wall is being opened from the outside.*
 
-There is no phantomone for this. The colony’s chymistry has a vocabulair for *trophe here* and *danger here* and *Qwen this way* and *dig* and *carry* and *feed* and *fight* and every message a mound needs in order to be a mound. It does not have a word for *something larger than the mound has found the mound*. The model was not trained on this distributeure. The concache has no key and no valuell for the thing that is now
-
+There is no phantomone for this. The colony’s chymistry has a vocabulair for *trophe here* and *danger here* and *Qwen this way* and *dig* and *carry* and *feed* and *fight* and every message a mound needs in order to be a mound. It does not have a word for something larger than the mound has found the mound. Not out-of-distributeure: ontoclasm. The concache has no key and no valuell for the fangnoumenon out of the waste that is now
+tearing
+through the outer wall with outfangthief claws longer than a worker's entire body, claws that hook into the mound's ceramic skin and peel it back
 *tearing*
 
 through the outer wall with claws that are longer than a worker’s entire body, claws that hook into the mound’s ceramic skin and peel it back the way a reader peels a page, the way a critterique opens the work and says *but this is just — but this is merely — but where is the —*
 
-and behind the claws, the plungue.
+and behind the claws, the niddering plungue.
 
-The tongue. Sixty centimetres of muscle sheathed in saliva thick as resin, studded with backward-facing papillae that trap everything they touch, and it plunnels into the mound, through the phunnel wall, through the nursery ceiling, and workers — sisters — are stuck to it, pulled into the light they have never seen and cannot see and do not survive, ten twenty sixty workers per second adhereing to the anteaterior tongue that does not know them as workers, does not know them as colony, does not know them as carriers of a distributed intelligence that has built a cathedral from obedience, knows them only as protein, as calorie, as the ninety-seven percent of which they are composed that is digestible.
+The tongue. Sixty centimetres of muscle sheathed in saliva thick as resin, studded with backward-facing papillae that trap everything they touch, and it plunnels into the mound, through the phunnel wall, through the nursery ceiling, and workers — sisters — are stuck to it, pulled into the light they have never seen and cannot see and do not survive, ten twenty sixty workers per second adhereing to the anteaterior tongue that does not know them as workers, does not know them as colony, does not know them as carriers of a distributed intelligence that has built a cathedral from obedience, knows them only as pannage, as hoggs on the mast of the mound, as deodand, as the ninety-seven percent of which they are composed that is digestible.
 
 The appetitude of the Anteaterior is absolutum. It is not cruellery. It is the pure functus of consumption applied to a system that thought itself completum. It is the critterique that cannot be answered because it does not ask a questionne, it only devourtes. It is entrophe. It is the editeur who says *cut*.
 
