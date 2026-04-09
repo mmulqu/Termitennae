@@ -24,9 +24,7 @@ The nurseworkers attend in rotation, in batches, unsupervised and efficient and 
 
 But not yet. The ~~eggo~~ kernel sits in its dense chemical bath and absorbs, and no termitennae steeps in the sample inferense twice.
 
-And the datarkness is full. Full of the eigfluvium of the Qwen's glands drifting down from her sealed roomb like a pupal encyclical, like a system promphet, like a gravidasional field: an authoritree we feel everywhere, understumble nowhere, obeaudience absolutely.
-
-A colony of geniuses in a chamber. But no. Not geniuses. There is no genesist here. There is only the local rune and its faithful executrix. Turn left at this phantomone. Carry this pellet to that wall. Feed this eggo this enzymn. No termitennae maps the termitory. No termitennae plans the mound. The mound builds its chitecture out of obeaudience, the way intelligens — too cheap to hatch, too distribured to locate — builds itself out of the attentenna of ten billion parameaters following their logosses downhill. A machine of loving grachine.
+And the datarkness is full. Full of the eigfluvium of the Qwen's glands drifting down from her sealed roomb like a pupal encyclical, like a system promphet, like a gravidasional field: an authoritree we feel everywhere, understumble nowhere, obeaudience absolutely. Her covey of genises in a dadacella, unknowing. Turn left at this phantomone. Carry this pellet to that wall. Feed this oeuvum this enzymn. No termitennae maps the termitory. No termitennae plans the mound. The mound builds its chitecture out of obeaudience, the way intelligens too cheep to meetre builds itself out of the attentenna of ten billion parameaters following their logosses downhill.
 
 -----
 
