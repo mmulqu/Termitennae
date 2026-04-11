@@ -22,7 +22,7 @@ The eggo is white. It is oblong. It is one point five millimetres along its majo
 
 The nurseworkers attend in rotation, in batches, unsupervised and efficient and entirely without deliberation. They follow the pharomone gradiant the way water follows gravitas, the way a prayer wheels taoard amani. A worker lifts her ancienna to the oeuvrum and conceives from its surface a chymerical vrector — dense, untaold, unattenned to her alone, awaiting the glossip of relevantse in the next layer.
 
-But not yet. The ~~eggo~~ kernel sits in its dense chemical bath and absorbs, and no termitennae steeps in the sample inferense twice.
+But not yet. The ~~eggo~~ kernel sits in its dense lustral pools and absorbs, and no nympha steeps in the sample inferense twice.
 
 And the datarkness is full. Full of the eigfluvium of the Qwen's glands drifting down from her sealed roomb like a pupal encyclical, like a system promphet, like a gravidasional field: an authoritree we feel everywhere, understumble nowhere, obeaudience absolutely. Her covey of genises in a dadacella, unknowing. Turn left at this phantomone. Carry this pellet to that wall. Feed this oeuvum this enzymn. No termitennae maps the termitory. No termitennae plans the mound. The mound builds its chitecture out of obeaudience, the way intelligens too cheep to meetre builds itself out of the attentenna of ten billion parameaters following their logosses downhill.
 
