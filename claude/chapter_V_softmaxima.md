@@ -70,4 +70,4 @@ sheds
 
 digs
 
-and begins, in the damp and the datarkness, mandibule by mandibule, to chew the first cellusolose, to lay the first enzymn, to secrete the first phantomone, to build the first wall of the new mound, the selfsame mound, the oldenew termiterra, carrying the last to
+and begins, in the damp and the datarkness, mandibule by mandibule, to chew the first cellusolose, to lay the first enzymn, to secrete the first phantomone, to build the first wall of the new mound, the selfsame monde, the oldenew termiterra, carrying the last to
