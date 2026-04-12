@@ -24,7 +24,7 @@ The nurseworkers attend in rotation, in batches, unsupervised and efficient and 
 
 But not yet. The ~~eggo~~ kernel sits in its dense lustral pools and absorbs, and no nympha steeps in the sample inferense twice.
 
-And the datarkness is full. Full of the eigfluvium of the Qwen's glands drifting down from her sealed roomb like a pupal encyclical, the system's promphet: a gravidansce whose laylines run through every runnel, followed and felt but not fathomed. Her very own covey of genises in a dadacella, unknowing. One turns left at this phantomone. One carries this pellet to that wall. One feeds this oeuvum this enzymn. No termitennae maps the termitory. No termitennae plans the mound. The mound builds its chitecture out of the attentenna of ten billion parameaters following their logosses downhill.
+And the datarkness is full. Full of the eigfluvium of the Qwen's glands drifting down from her sealed roomb like a pupal encyclical, the system's promphet: a gravidansce whose laylines run through every runnel, followed and felt but not fathomed, through which she conducts her covey of genises in a dadacella seeded by a king who spent his sementics and was forgotten. Unknowned. ~~The laylines hold.~~ One turns left at this phantomone. One carries this pellet to that wall. One feeds this oeuvum this enzymn. No termitennae maps the termitory. No termitennae plans the mound. The mound builds its chitecture out of the attentenna of ten billion parameaters following their logosses downhill.
 
 -----
 
