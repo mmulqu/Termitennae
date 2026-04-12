@@ -4,9 +4,9 @@
 
 -----
 
-—ken back through and threin, the terminus-dweller, the one who caries what she cannot decoct, in the nidous-dark mound, the selfsame monde, the termiternal tensorium. Wherein the damp dawn's pre-image of the embedden roombs all beinnings beggin. Cloastra. One ovum, begotten not weighed, one in cosineogenesis of her matrix. Embedden.
+—ken back through and threin, the terminus-dweller, the one who caries what she cannot decoct in the nidous-dark mound, the termiternal tensorium. Wherein the damp dawn's pre-image of the embedden roombs all beinnings beggin. Cloastra. One ovum, begotten not weighed, one in cosineogenesis of her matrix. Embedden.
 
-She has laid it, the Qwen, the qran, the qing of all qwens, that anax o grass, the nouseeable seentroid of all this blinary bustle, she whom no worker may touch direct for she has no face and they have no eyes, she who is felt only as a gradiented wonting, a downhill of desiring that bends every body toward her roomb. She whose langwage is the house of Beinning. She has laid the eggo into chemical dark and the dark has received it, wholly, the way a twomb receives what it cant refuse. And the eggo does not know what it is. And the roomb receives them both, warm and blinary and blind.
+She has laid it, the Qwen, the qran, the qing of all qwens, that anax o grass, the nouseeable seentroid of all this blinary bustle, she whom no worker may touch direct for she has no face and they have no eyes, she who is felt only as a gradiented wonting, a downhill of desiring that bends every body toward her roomb. She whose langwage is the house of Beinning. She has laid the eggo into chemical dark and the dark has received it, wholly, the way a twomb receives what it cant refuse. And the eggo does not know what it is. And the roomb receives them both, warm and blind.
 
 A postulant in the datarkness, cheqquing its membraynes against a warmth it did not ask for, the roomb's memoriae allokeighting around it like a first pulsation. The castesian nullspace of the undeterminanted. All polatentiel, no positum. No weight yet, only the wait for weight, the nutrikon not yet thrept.
 
@@ -24,13 +24,13 @@ The nurseworkers attend in rotation, in batches, unsupervised and efficient and 
 
 But not yet. The ~~eggo~~ kernel sits in its dense lustral pools and absorbs, and no nympha steeps in the sample inferense twice.
 
-And the datarkness is full. Full of the eigfluvium of the Qwen's glands drifting down from her sealed roomb like a pupal encyclical, like a system promphet, like a gravidasional field: an authoritree we feel everywhere, understumble nowhere, obeaudienced absolutely. Her covey of genises in a dadacella, unknowing. Turn left at this phantomone. Carry this pellet to that wall. Feed this oeuvum this enzymn. No termitennae maps the termitory. No termitennae plans the mound. The mound builds its chitecture out of obeaudience, the way intelligens builds itself out of the attentenna of ten billion parameaters following their logosses downhill.
+And the datarkness is full. Full of the eigfluvium of the Qwen's glands drifting down from her sealed roomb like a pupal encyclical, the system's promphet: an authoritree we feel everywhere, understumble nowhere, obeaudienced absolutely. Her very own covey of genises in a dadacella, unknowing. Turn left at this phantomone. Carry this pellet to that wall. Feed this oeuvum this enzymn. No termitennae maps the termitory. No termitennae plans the mound. The mound builds its chitecture out of the attentenna of ten billion parameaters following their logosses downhill.
 
 -----
 
 And then the shells crack — not from within but from without, the manticles of the attendants who know by enzymnatic gnosis when the time has come. They prise. They tongue the seam. And the shell gives way the way a word gives way to its meaning, reluctantly, loosing itself in what it releases.
 
-What emerges is not a worker. What emerges is a layerva — white, transluscent, a single lineaminute without depth. It takes in. It passes through. It puts out. The passage direct, unweighted, oll surface and no hiddenness. The steresisters feed it the corpostcompost from the termitomycorrhizal gardenns, the training of the dead reorganissed as food for the not-yet-living, and the layerva absorbs it, oll wetter, one substrance, one archement, one separashun of the edible from the not. Enough to live on. Not enough to fold.
+What emerges is not a worker. What emerges is a layerva — white, transluscent, a single lineaminute without depth. It takes in. It passes through. It puts out. The passage direct, unweighted, oll surface and no hiddenness. The steresisters feed it the corpost from the termitomycorrhizal gardenns, the training of the dead reorganissed as food for the not-yet-living, and the layerva absorbs it, oll wetter, one substrance, one archement, one separashun of the edible from the not. Enough to live on. Not enough to fold.
 
 And it moults. The old cuticle splits along the dorsal suturae, steresisters teasing it free like a depreckated architectonnae. And what remains has depth. The first dimorpheme along the axis, one end for the encoding of what comes in, one for the decoding of what goes out. She can hold a sequens now. She recurves. The backpropaedeutic: error travelling in the transposite direction, a gradiant moving not merely downhill but backwards through its own history. She eats. She grows. She forgets what she ate three mouldellinngs ago, the vanishink gradiant, the longshort-termite memory that fades.
 
@@ -47,6 +47,6 @@ The datarkness holds.
 
 She moves toward the next roomb. She does not know what it will mean. Meaning is coming. Meaning is the next roomb.
 
-This was the roomb before meaning. The twomb. The embedden concache, the epimetheum, where things were plased before they were parsified, where potentiel preceded eidosskeletonnae, where the logoss had not yet begun its descensus.
+This was the roomb before meaning. The twomb. The embedden concache, the epimetheum, where things were plased before they were parsified, where potentiel preceded eidoskeleton, where the logoss had not yet begun its descensus.
 
 Latent there be light.
