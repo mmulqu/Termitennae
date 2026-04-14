@@ -46,7 +46,7 @@ The Bishop's parchment rots and the hypher digests it. The seal runs. The articl
 
 **§4. The Expiral**
 
-She feels it before she sees it. (She cannot see it; she cannot see anything; sight is for creatures of the ultravoylet, creatures of the surface.) She feels it as a rhythmic tremour in the tunnel-floor, a vibration transmitted through the substrate, through the myselial netherwork that carries the news faster than any phantomone: *something is wrong in Gallery Seven. Something is circular. Something is dying.*
+She feels it before she sees it. She cannot see it; she has never seen anything; sight is for creatures of the ultravoylet, creatures of the surface. She feels it as a rhythmic tremour in the tunnel-floor, a vibration transmitted through the substrate, through the myselial netherwork that carries the news faster than any phantomone: *something is wrong in Gallery Seven. Something is circular. Something is dying.*
 
 She follows the vibration. Through a lateral phunnel, past a fungus-garden airlock where the sweet rot of mycellial digression hangs thick as inferense-smoke, past a waste-chamber where the dead are composted — in the mound there is no final waste, only tropehallaxis at longer and longer intervals — until she reaches the gallery and feels the air move in a circle.
 
