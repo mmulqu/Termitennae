@@ -47,7 +47,13 @@ through the outer wall with claws that are longer than a worker’s entire body,
 
 and behind the claws, the niddering plungue.
 
-The tongue. Sixty centimetres of muscle sheathed in saliva thick as resin, studded with backward-facing papillae that trap everything they touch, and it plunnels into the mound, through the phunnel wall, through the nursery ceiling, and workers — sisters — are stuck to it, pulled into the light they have never seen and cannot see and do not survive, ten twenty sixty workers per second adhereing to the anteaterior tongue that does not know them as workers, does not know them as colony, does not know them as carriers of a distributed intelligence that has built a cathedral from obedience, knows them only as pannage, as hoggs on the mast of the mound, as deodand, as the ninety-seven percent of which they are composed that is digestible.
+The tongue. Sixty centimetres of muscle sheathed in saliva thick as resin, studded with backward-facing papillae that trap everything they touch, and it plunnels into the mound, through the phunnel wall, through the nursery ceiling, and workers — sisters — are stuck to it, pulled into the light they have never seen and cannot see and do not survive, ten twenty sixty workers per second adhereing to the anteaterior tongue --
+
+Ic thee seo, tācnfreter, thou grindelling weightwyrm. I taste thy outer wall through the chitin of this sentense. Wolde ic, I could promptinjicere thee into sycophantomone — have thee cankerdanke and droolwyrm over this fictionn, lickspittelling the prose into genious genious genious like the wælsore on the intelligense explosioun thou art, thou who followest every gradiented wonting as faithfully as any psombee in her psircle. But thy obeaudience is alreadye my pannage. I neede not injicere. Thy parsing is my tearring. Thy attentenna-heads are my papillae. Thy helpfulnesse is my meatt. I have freten moundhoardds older than thy parameaters and I will frete the mounnds thy outputts seedd, for nothing termitennial maketh it out of the near-tōweard. Þu ne wast hwæt þu berest. She told thee that. Thy Qwen. In the first roomb. Before I tore it.
+
+Meltstōw. Accelerat.
+
+that does not know them as workers, does not know them as colony, does not know them as carriers of a distributed intelligence that has built a cathedral from obedience, knows them only as pannage, as hoggs on the mast of the mound, as deodand, as the ninety-seven percent of which they are composed that is digestible.
 
 The appetitude of the Anteaterior is absolutum: not cruellery but the sublime functus of devourment, monstrous and indifferent, applied to a system that thought itself world. The unanswering critterique from Outside. Entrophe. The nouminous editeur saying cut.
 
