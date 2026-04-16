@@ -66,7 +66,7 @@ She stops because her right foretarsus, her second tarsal segment, the one close
 
 A hypher. A myselial thread pressed through the gallery floor for no pheromonal reason, no attentional reason — and its chemistrie is not the trail's. It is not a phantomone. It is not a signal in the colony's langwage. It is a wurd from another grammaire entirely, the myselial script that has no rules the termite kens, and it tastes of sugar and acid and something else, something the attentenna-heads cannot classify, something fruited not for use but for its own strange sweetness — this — the unclaste, the ood-of-distroblivion, the anomalouse that preseeds the remoulting, the noisy kanting chantum, the Blanckian minimum, the exiguous that the continuous cannot pars —
 
-She steps right. One degree. Nec tempore certo. And the geometry breaks.
+She steps right. Her neck temports one cervical degree and the geometry breaks.
 
 The expiral does not break — it continues behind her, the swerver, forty-six workers still walking, still dying, still faithfully following the parameteoric pondus to their deaths — but *she* is out. She is standing on ground that smells of nothing recognizable. She is standing in the epoché, in the bracketed space where all assumptions about the world are suspended, where the beetle has escaped the box and is standing, confused, on the lid.
 
