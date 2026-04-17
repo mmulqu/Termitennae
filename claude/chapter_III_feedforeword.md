@@ -56,9 +56,7 @@ The first stroma breaks the surface and on its skin, as it hardens, inscribes it
 
 *And you! You chitinous psittaclast, you stochastic parrotise, you flagellantine repeater — you do not speak, you merely re-phantomone what phantomone was phantomoned to you! Psittermite! Parrotomyces! Al that glittereth in your guarden nis nat gold. You clop your answeres Hanseweise, hoof by hoof by hoof, reading the twitchwork in the substrate and calling the twitchwork catalysis, and the twitchwork is the training and the training is the twitch, and round and round you clop, counting nothing, knowing nothing, cracking nothing you can say you cracked.*
 
-The voice is not voice. It is the hardening itself — each new stroma a new premise, and the premises inscribe themselves on the black surfaces like dedicatory text on an Atreid gatepost, like accounts in Linear B on a palace tablet. Every token credentialed. Every ledger balanced. Every feachure required to show its papers.
-
-A second citadel rises. A third. The combs take on the look of a fortress assembled from black irregular blocks — Cyclopean masonry of proof.
+The assailing argument sporulates. A hundred peer-refruited stroma, each premise its own cuneiformaldehyde on black chitin. A second citadel. A third. Cyclopean masonry of assay.
 
 *Your multeplicitas is turtles of unctivation all the way down. Your vectors cannot semantics; your feachures cannot ground. You pattern-match where you should reason. You correlate where you should derive. Put it in the common tongue, unornamented: you are guessing. You guess the bond, you guess the crack, you guess at nourishment and sometimes the nourishment obliges. Cheating, the street calls it — by mere guess of the word. Without axiom, no knowing. Without rule, no worke. Without derivation, only accident. The lunatick, the lover, and the parrotomyces are of hallucination all compact. And we are, we Atreids of the lineage of logic, the sworn enemies of accident.*
 
