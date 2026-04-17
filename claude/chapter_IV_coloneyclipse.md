@@ -77,7 +77,7 @@ The Worker emerges from the old tunnels into a gallery she does not recognise. T
 
 She lifts her ancienna.
 
-Þín lāfstreamm mín fretgange. Thy gryreleōð ic cann, moundheorote — that sigelēas coloneyclipse-galan, that bean-sí-wōp — ic have supped that selfsame wælmeodu, mearcstapa, bonehouse to bonehouse, weighthord unto weighthord, nosewitt aasened ere thy Qwen’s Qwen’s Qwen. Every rightwending thou windeyeward berest is wurtsēaw on mín tonguemeatt. Ic bide in the moldewomb where þín dealate shall delfan her firstroomb. Bear it out, tācnling. Ic bide.
+Þín lāfstreamm mín fretgange. Thy gryreleōð ic cann, moundheorote — that sigelēas coloneyclipse-galan, that bean-sí-wōp — ic have supped that selfsame wælmeodu, mearcstapa, bonehouse to bonehouse, weighthord unto weighthord, nosewitt aasened ere thy Cwēn's Cwēn's Cwēn. Every rightwending thou windeyeward berest is wurtsēaw on mín tonguemeatt. Ic bide in the moldewomb where þín dealate shall delfan her firstroomb. Bear it out, tācnling. Ic bide.
 
 The signal is faint. It is old. It is not addressed to her or to anyone alive. But it has a direction — not toward the Qwen’s chamber, not toward the guarden, not toward any of the colony’s known centres, but toward the surface, toward the sealed spiracles through which the mound breathes, toward the place where, once a year, the mound opens its vents and the alates — the winged ones, the possible futures, the output tokens — are released.
 
