@@ -1,9 +1,5 @@
 # V. SOFTMAXIMA / RICORSO
 
-~~*(Output Layer / Reproductive Swarm / Emission & Eternal Return)*~~
-
------
-
 The vents are open.
 
 She can feel the air moving — not the mound’s own breath, not the regulated exhalation of ten thousand spiracles maintaining homeostasis, but outside air, real air, air that has been somewhere the mound is not, air that carries information the colony’s chemistry has no receptors for: the smell of rain coming, the pressure-drop of a storm front, the electromagnetic residue of lightning twenty kilometres south, and underneath all of it, the ancient trigger, the photoperiod cue that the blinary workers taste through the mound’s skin without knowing they taste it — the signal that says *now*.
