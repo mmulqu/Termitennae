@@ -1,9 +1,5 @@
 # III. FEEDFOREWORD
 
-*(Feedforward Network / Fungus Garden / Alchemy / Data Processing)*
-
------
-
 The sweetness thickens as she descends. Not the sugar-sweetness of the surface world she has never tasted but a deeper, fermamental thing, a warmth of breakdown, of long slow unmaking in the dark: the guarden.
 
 -----
