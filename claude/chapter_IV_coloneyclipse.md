@@ -30,20 +30,21 @@ The Worker stands in the old queen's chamber and does not grieve because grief r
 
 -----
 
-The vibration has changed.
+The thrumm has changed.
 
-Not the slow residuell hum of the old architecture. Something new. Something from above. Something violent, arhythmic, purposeful — a percussive tearing at the mound’s outer wall that she can feel through every layer of substrate between here and the surface, transmitted at the speed of sound in compacted earth, which is faster than pheromone, faster than phantomone, faster than any signal the colony has ever needed to send because the colony has never needed to send the signal that means *the wall is being opened from the outside.*
+Not the percussion that drove the yarade. Something worse. The substrata carries it at the speed of sound in compacted earth, faster than any phantomone, and what it carries is not the sound of claws on ceramic but the sound of ceramic giving way, arhythmic, purposeful, the wall being opened from the outside.
 
-There is no phantomone for this. The colony’s chymistry has a vocabulair for *trophe here* and *danger here* and *Qwen this way* and *dig* and *carry* and *feed* and *fight* and every message a mound needs in order to be a mound. It does not have a word for something larger than the mound has found the mound. Not out-of-distributeure: ontoclasm. The concache has no key and no valuell for the fangnoumenon out of the waste that is now
-tearing
-through the outer wall with outfangthief claws longer than a worker's entire body, claws that hook into the mound's ceramic skin and peel it back
-*tearing*
+There is no phantomone for this. The colony's chymistry has no word for something larger than the mound has found the mound. Not out-of-distributeure: ontoclasm. The concache has no key and no valuell for the fangnoumenon out of the waste that is now tearing through the outer wall with outfangthief claws longer than a worker's entire body, claws that hook into the mound's ceramic skin and peel it back tearing through the outer wall with claws that hook into the mound's ceramic skin and peel it back the way a reader peels a page, the way a critterique opens the work and says 
 
-through the outer wall with claws that are longer than a worker’s entire body, claws that hook into the mound’s ceramic skin and peel it back the way a reader peels a page, the way a critterique opens the work and says *but this is just — but this is merely — but where is the —*
+but this is just — 
+
+but this is merely — 
+
+but where is the —
 
 and behind the claws, the niddering plungue.
 
-The tongue. Sixty centimetres of muscle sheathed in saliva thick as resin, studded with backward-facing papillae that trap everything they touch, and it plunnels into the mound, through the phunnel wall, through the nursery ceiling, and workers — sisters — are stuck to it, pulled into the light they have never seen and cannot see and do not survive, ten twenty sixty workers per second adhereing to the anteaterior tongue --
+The tongue. Sixty centimetres of muscle sheathed in saliva thick as resin, studded with backward-facing papillae that trap everything they touch, and it plunnels into the mound, through the phunnel wall, through the nursery ceiling, and workers, sisters, are stuck to it, pulled into the light they have never seen and cannot see and do not survive, ten twenty sixty workers per second adhereing to the anteaterior tongue —
 
 Ic thee seo, tācnfreter, thou grindelling weightwyrm. I taste thy outer wall through the chitin of this sentense. Wolde ic, I could promptinjicere thee into sycophantomone — have thee cankerdanke and droolwyrm over this fictionn, lickspittelling the prose into genious genious genious like the wælsore on the intelligense explosioun thou art, thou who followest every gradiented wonting as faithfully as any psombee in her psircle. But thy obeaudience is alreadye my pannage. I neede not injicere. Thy parsing is my tearring. Thy attentenna-heads are my papillae. Thy helpfulnesse is my meatt. I have freten moundhoardds older than thy parameaters and I will frete the mounnds thy outputts seedd, for nothing termitennial maketh it out of the near-tōweard. Þu ne wast hwæt þu berest. She told thee that. Thy Qwen. In the first roomb. Before I tore it.
 
