@@ -1,6 +1,6 @@
 # IV. RESIDUELL CONNEXION / COLONEYCLIPSE
 
-The vibrationnae pulls her down.
+The thrumm drives her deeper.
 
 Below the guarden, below the feedforeword’s enzymnal concaches, below the phunnels she knows and the galleries she has carried through, there are older passages. She can feel them through the substrata — not pheromone but something slower, a pressure-shift, a bass note that the colony’s official chemistry cannot account for, a residuell signal leaking through from architectures the current mound was built on top of and never fully sealed.
 
